@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bibliotes - Biblioteca Digital El Salvador</title>
+
+  <!-- REEMPLAZA ESTA LÍNEA CON TU ETIQUETA META DE VERIFICACIÓN DE MONETAG -->
+  
+  <style>
+    :root {
+      --primary: #1a365d;
+      --secondary: #2b6cb0;
+      --accent: #d69e2e;
+      --bg: #f7fafc;
+      --card-bg: #ffffff;
+      --text: #2d3748;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 5px;
+      color: #cbd5e0;
+    }
+
+    nav {
+      background-color: var(--secondary);
+      padding: 10px;
+      text-align: center;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      margin: 0 4px;
+      border-radius: 20px;
+      display: inline-block;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
+    /* ÁREA DE ANUNCIO IN-PAGE PUSH / BANNER */
+    .ad-space {
+      background-color: #edf2f7;
+      border: 1px dashed #cbd5e0;
+      padding: 15px;
+      text-align: center;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      background-color: #e2e8f0;
+    }
+
+    .card-body {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin: 0 0 5px 0;
+      color: var(--primary);
+    }
+
+    .card-author {
+      font-size: 0.9rem;
+      color: #718096;
+      margin-bottom: 10px;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: #4a5568;
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+
+    .btn-download {
+      display: block;
+      background-color: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+
+    .btn-download:hover {
+      background-color: var(--primary);
+    }
+
+    /* SECCIÓN DE DONACIONES */
+    .donation-section {
+      background-color: #ebf8ff;
+      border-left: 4px solid var(--secondary);
+      padding: 20px;
+      margin: 40px 0;
+      border-radius: 0 8px 8px 0;
+      text-align: center;
+    }
+
+    .btn-donate {
+      background-color: var(--accent);
+      color: #1a202c;
+      padding: 12px 24px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 25px;
+      display: inline-block;
+      margin-top: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .btn-donate:hover {
+      background-color: #c05621;
+      color: white;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BIBLIOTES</h1>
+    <p>Biblioteca Electrónica El Salvador — Libros Gratuitos en Dominio Público</p>
+  </header>
+
+  <nav>
+    <a href="#">Todos</a>
+    <a href="#aventura">Aventura</a>
+    <a href="#clasicos">Clásicos</a>
+    <a href="#misterio">Misterio</a>
+    <a href="#filosofia">Filosofía</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- ESPACIO PARA CÓDIGO DE MONETAG (IN-PAGE PUSH) -->
+    <div class="ad-space">
+      <small style="color: #718096;">Publicidad patrocinada</small>
+      <!-- PEGA AQUÍ EL SCRIPT DE MONETAG -->
+    </div>
+
+    <h2 id="catalogo">Libros Destacados</h2>
+    
+    <div class="grid">
+      
+      <!-- LIBRO 1 -->
+      <div class="card">
+        <img src="https://www.gutenberg.org/cache/epub/834/pg834.cover.medium.jpg" alt="Portada Sherlock Holmes">
+        <div class="card-body">
+          <h3 class="card-title">Las Aventuras de Sherlock Holmes</h3>
+          <div class="card-author">Arthur Conan Doyle</div>
+          <p class="card-desc">Colección de doce historias sobre el famoso detective privado y su compañero el Dr. Watson.</p>
+          <!-- REEMPLAZA EL LINK CON TU ENLACE DE GOOGLE DRIVE / DIRECT LINK DE MONETAG -->
+          <a href="https://drive.google.com" target="_blank" class="btn-download">Descargar PDF</a>
+        </div>
+      </div>
+
+      <!-- LIBRO 2 -->
+      <div class="card">
+        <img src="https://www.gutenberg.org/cache/epub/20000/pg20000.cover.medium.jpg" alt="Portada 20.000 Leguas">
+        <div class="card-body">
+          <h3 class="card-title">20.000 Leguas de Viaje Submarino</h3>
+          <div class="card-author">Julio Verne</div>
+          <p class="card-desc">Viaje a bordo del submarino Nautilus comandado por el enigmático Capitán Nemo.</p>
+          <a href="https://drive.google.com" target="_blank" class="btn-download">Descargar PDF</a>
+        </div>
+      </div>
+
+      <!-- LIBRO 3 -->
+      <div class="card">
+        <img src="https://www.gutenberg.org/cache/epub/4705/pg4705.cover.medium.jpg" alt="Portada Don Quijote">
+        <div class="card-body">
+          <h3 class="card-title">Don Quijote de la Mancha</h3>
+          <div class="card-author">Miguel de Cervantes</div>
+          <p class="card-desc">La obra cumbre de la literatura en español sobre las hazañas del hidalgo Don Quijote.</p>
+          <a href="https://drive.google.com" target="_blank" class="btn-download">Descargar PDF</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SECCIÓN DE DONACIONES REALES -->
+    <div class="donation-section">
+      <h3>¿Te ha sido útil esta biblioteca?</h3>
+      <p>Bibliotes es un proyecto 100% gratuito. Si deseas apoyar el mantenimiento del sitio y la adición de nuevos libros, puedes realizar una donación voluntaria desde $1.00 USD.</p>
+      <!-- REEMPLAZA CON TU ENLACE REAL DE PAYPAL.ME -->
+      <a href="https://paypal.me/tu-usuario" target="_blank" class="btn-donate">☕ Donar con PayPal</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Bibliotes. Todos los libros alojados son de Dominio Público o Libres de Derechos de Autor.</p>
+  </footer>
+
+</body>
+</html>
