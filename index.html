@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bibliotes - Biblioteca Electrónica El Salvador</title>
-  <!-- Etiqueta Meta de Monetag -->
   <meta name="monetag" content="d0a0fd31583c75f52acb46fce08bbcff">
   <style>
     :root {
-      --bg-color: #f1f3f5; /* Gris claro elegante para el scroll */
-      --header-dark: #2b2d42; /* Gris oscuro mate para la cinta superior */
+      --bg-color: #f1f3f5; /* Fondo gris claro elegante */
+      --header-dark: #2b2d42; /* Cinta superior gris oscuro mate */
       --text-main: #1e293b;
-      --salvador-blue: #0047AB; /* Azul El Salvador */
+      --salvador-blue: #0047AB; 
       --card-bg: #ffffff;
       --border-color: #e2e8f0;
     }
@@ -32,13 +31,13 @@
       min-height: 100vh;
     }
 
-    /* Cinta superior en gris oscuro mate */
+    /* Cinta superior */
     header {
       background-color: var(--header-dark);
       display: flex;
       flex-direction: column;
       width: 100%;
-      border-bottom: 3px solid var(--salvador-blue);
+      border-bottom: 4px solid var(--salvador-blue);
     }
 
     .header-content {
@@ -48,6 +47,7 @@
       border-bottom: 1px solid var(--border-color);
     }
 
+    /* Logo corregido */
     .logo {
       font-family: "Times New Roman", Times, serif;
       font-size: 3rem;
@@ -57,15 +57,16 @@
       letter-spacing: -1px;
     }
 
-    /* La letra 'e' y la 's' en Arial gruesa y blanca con fondo azul */
-    .logo .digital-char {
+    .logo .digital-es {
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 900;
       color: #ffffff;
       background-color: var(--salvador-blue);
-      padding: 0 4px;
+      padding: 0 8px; /* Un solo bloque azul continuo */
       border-radius: 4px;
       display: inline-block;
+      letter-spacing: 0;
+      margin-left: 2px;
     }
 
     .subtitle {
@@ -76,7 +77,7 @@
       font-weight: normal;
     }
 
-    /* Menú de Navegación completo y adaptable */
+    /* Menú de Navegación */
     nav {
       background: var(--card-bg);
       display: flex;
@@ -99,7 +100,7 @@
       color: var(--salvador-blue);
     }
 
-    /* Contenido Principal */
+    /* Contenido */
     main {
       max-width: 1100px;
       width: 100%;
@@ -132,7 +133,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
     .book-info h3 {
@@ -180,8 +181,8 @@
   <header>
     <div class="header-content">
       <div class="logo-container">
-        <!-- Logo en Times New Roman con 'e' y 's' en Arial blanca gruesa -->
-        <a href="#" class="logo">Bibliot<span class="digital-char">e</span><span class="digital-char">s</span></a>
+        <!-- Logo corregido sin la "t" y con bloque unificado -->
+        <a href="#" class="logo">Bibliot<span class="digital-es">es</span></a>
       </div>
       <div class="subtitle">Biblioteca Electrónica El Salvador</div>
     </div>
