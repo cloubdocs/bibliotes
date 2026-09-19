@@ -3,60 +3,396 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catálogo - Bibliotes</title>
+  <title>Bibliotes - Biblioteca Electrónica El Salvador</title>
+  <meta name="monetag" content="d0a0fd31583c75f52acb46fce08bbcff">
   <style>
     :root {
-      --bg-body-dark: #5c768d;
-      --header-light: #a0bccc;
+      --bg-body-dark: #5c768d; /* Fondo gris/azul de la sección inferior */
+      --header-light: #a0bccc; /* Fondo claro de la parte superior */
       --salvador-blue: #0047AB; 
-      --bone-white: #f7f4ef;
-      --alphabet-bg: #e2e8f0;
+      --salvador-blue-hover: #003380;
+      --bone-white: #f7f4ef;    /* Blanco hueso / crema suave para menús y tarjetas */
+      --text-main: #1e293b;
       --border-color: #cbd5e1;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--bg-body-dark); font-family: -apple-system, sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
-    
-    header { background-color: var(--header-light); text-align: center; padding: 1.5rem; border-top: 4px solid var(--salvador-blue); }
-    .logo { font-family: "Times New Roman", Times, serif; font-size: 2.5rem; color: #000; text-decoration: none; }
-    .logo .digital-es { font-family: Arial, sans-serif; font-weight: 900; color: #fff; background-color: var(--salvador-blue); padding: 0 8px; border-radius: 6px; }
 
-    main { max-width: 1100px; width: 100%; margin: 2rem auto; padding: 0 1rem; flex: 1; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    .alphabet-section { background-color: var(--alphabet-bg); border-radius: 12px; padding: 3rem 2rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.15); }
-    .alphabet-title { font-family: "Times New Roman", Times, serif; font-weight: bold; font-size: 1.8rem; color: #0f172a; text-align: center; margin-bottom: 2.5rem; }
-    
-    .alphabet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(75px, 1fr)); gap: 1.5rem; justify-items: center; }
-    .book-item { display: flex; align-items: center; justify-content: center; width: 70px; height: 95px; background: #b0c4de; border-radius: 4px 8px 8px 4px; box-shadow: -4px 0 0 #4682b4, 3px 4px 8px rgba(0,0,0,0.15); color: #0f172a; font-family: "Times New Roman", Times, serif; font-weight: bold; font-size: 2.2rem; text-decoration: none; position: relative; transition: transform 0.2s; }
-    .book-item::after { content: ""; position: absolute; left: 6px; top: 0; bottom: 0; width: 2px; background: rgba(0,0,0,0.15); }
-    .book-item:hover { transform: translateY(-5px) scale(1.05); background: #9ab4d0; box-shadow: -4px 0 0 #315b7d, 4px 8px 12px rgba(0,0,0,0.25); }
+    body {
+      background-color: var(--bg-body-dark);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-    footer { background: var(--bone-white); text-align: center; padding: 1.5rem; color: #64748b; margin-top: auto; border-top: 1px solid var(--border-color); }
+    /* Encabezado */
+    header {
+      background-color: var(--header-light);
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-top: 4px solid var(--salvador-blue);
+    }
+
+    .header-content {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .logo {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 3.5rem;
+      font-weight: normal;
+      color: #000000;
+      text-decoration: none;
+      letter-spacing: -1px;
+    }
+
+    .logo .digital-es {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 900;
+      color: #ffffff;
+      background-color: var(--salvador-blue);
+      padding: 0 10px;
+      border-radius: 6px;
+      display: inline-block;
+      letter-spacing: 0;
+      margin-left: 2px;
+      transform: translateY(-3px);
+    }
+
+    .subtitle {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 1.2rem;
+      color: #000000;
+      margin-top: 0.5rem;
+      font-weight: normal;
+    }
+
+    /* Menú de Navegación en Blanco Hueso */
+    nav {
+      background: var(--bone-white);
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #334155;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--salvador-blue);
+    }
+
+    /* Contenido Principal */
+    main {
+      max-width: 1100px;
+      width: 100%;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      flex: 1;
+    }
+
+    /* Banner Informativo */
+    .hero-banner {
+      background: var(--bone-white);
+      border-radius: 8px;
+      padding: 1.25rem 1rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      border-left: 5px solid var(--salvador-blue);
+    }
+
+    .hero-banner p {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    /* Botón Grande de Monetización (Enlace a Biblioteca en 2 Líneas) */
+    .main-cta-container {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .btn-main-library {
+      display: inline-block;
+      width: 100%;
+      max-width: 550px;
+      background-color: var(--salvador-blue);
+      color: #f8fafc;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.25);
+      transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-main-library:hover {
+      background-color: var(--salvador-blue-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px -2px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-main-library .line-title {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .btn-main-library .line-subtitle {
+      display: block;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #e2e8f0;
+      margin-top: 0.25rem;
+    }
+
+    /* Secciones Informativas en Recuadro (Blanco Hueso) */
+    .info-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .info-card {
+      background: var(--bone-white);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.25rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--salvador-blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-card p, .info-card ul {
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    .info-card ul {
+      list-style-position: inside;
+      margin-top: 0.5rem;
+    }
+
+    .donation-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+
+    .btn-donate {
+      flex: 1;
+      text-align: center;
+      padding: 0.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: white;
+    }
+
+    .btn-coffee { background-color: #FFDD00; color: #000; }
+    .btn-paypal { background-color: #0070BA; }
+
+    /* Sección del Scroll de Libros */
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: #ffffff;
+      border-left: 4px solid #ffffff;
+      padding-left: 0.75rem;
+    }
+
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    /* Tarjetas de Libros en Blanco Hueso */
+    .book-card {
+      background: var(--bone-white);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-cover {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+      background-color: #e2e8f0;
+    }
+
+    .book-info h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: var(--text-main);
+    }
+
+    .book-info p {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-bottom: 0.8rem;
+    }
+
+    .download-btn {
+      display: block;
+      text-align: center;
+      background-color: var(--salvador-blue);
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+
+    .download-btn:hover {
+      background-color: var(--salvador-blue-hover);
+    }
+
+    footer {
+      background: var(--bone-white);
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <a href="index.html" class="logo">Bibliot<span class="digital-es">es</span></a>
+    <div class="header-content">
+      <div class="logo-container">
+        <a href="#" class="logo">Bibliot<span class="digital-es">es</span></a>
+      </div>
+      <div class="subtitle">Biblioteca Electrónica El Salvador</div>
+    </div>
   </header>
 
+  <!-- Menú con las 7 categorías definidas -->
+  <nav>
+    <a href="#genero">Libros por género</a>
+    <a href="#misterio">Misterio y Conspiración</a>
+    <a href="#clasicos">Clásicos de la literatura</a>
+    <a href="#esotericos">Esotéricos</a>
+    <a href="#mined">Académicos/MINED</a>
+    <a href="#autodidacta">Oficios/Autodidacta</a>
+    <a href="#religiosos">Biblia/Religiosos</a>
+  </nav>
+
   <main>
-    <section class="alphabet-section">
-      <h2 class="alphabet-title">escoge el libro que buscas por orden alfabetico</h2>
-      <div class="alphabet-grid">
-        <a href="#letra-a" class="book-item">A</a><a href="#letra-b" class="book-item">B</a>
-        <a href="#letra-c" class="book-item">C</a><a href="#letra-d" class="book-item">D</a>
-        <a href="#letra-e" class="book-item">E</a><a href="#letra-f" class="book-item">F</a>
-        <a href="#letra-g" class="book-item">G</a><a href="#letra-h" class="book-item">H</a>
-        <a href="#letra-i" class="book-item">I</a><a href="#letra-j" class="book-item">J</a>
-        <a href="#letra-k" class="book-item">K</a><a href="#letra-l" class="book-item">L</a>
-        <a href="#letra-m" class="book-item">M</a><a href="#letra-n" class="book-item">N</a>
-        <a href="#letra-nn" class="book-item">Ñ</a><a href="#letra-o" class="book-item">O</a>
-        <a href="#letra-p" class="book-item">P</a><a href="#letra-q" class="book-item">Q</a>
-        <a href="#letra-r" class="book-item">R</a><a href="#letra-s" class="book-item">S</a>
-        <a href="#letra-t" class="book-item">T</a><a href="#letra-u" class="book-item">U</a>
-        <a href="#letra-v" class="book-item">V</a><a href="#letra-w" class="book-item">W</a>
-        <a href="#letra-x" class="book-item">X</a><a href="#letra-y" class="book-item">Y</a>
-        <a href="#letra-z" class="book-item">Z</a>
+    <!-- Banner Informativo -->
+    <div class="hero-banner">
+      <p>Encuentra tu libro en versión PDF completamente gratis y en descarga directa desde Google Drive</p>
+    </div>
+
+    <!-- Botón Principal Promocional / Smartlink en 2 líneas -->
+    <div class="main-cta-container">
+      <!-- Reemplazar el '#' del href con tu Direct Link / Smartlink de Monetag -->
+      <a href="#" target="_blank" class="btn-main-library">
+        <span class="line-title">¡Vamos a la Biblioteca!</span>
+        <span class="line-subtitle">Descarga aquí</span>
+      </a>
+    </div>
+
+    <!-- Recuadros de Información y Donación -->
+    <div class="info-boxes">
+      <div class="info-card">
+        <h3>¿Cómo descargar?</h3>
+        <p>Obtener tus libros es muy sencillo y rápido:</p>
+        <ul>
+          <li>Busca el título de tu preferencia en la biblioteca.</li>
+          <li>Haz clic en el botón <strong>Descargar PDF</strong>.</li>
+          <li>Accederás directamente al archivo en Google Drive para leerlo o guardarlo.</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Apoya el Proyecto</h3>
+        <p>Mantener este sitio libre de anuncios molestos y con descargas directas es posible gracias a tu colaboración voluntaria.</p>
+        <div class="donation-links">
+          <a href="#" target="_blank" class="btn-donate btn-coffee">☕ Buy Me a Coffee</a>
+          <a href="#" target="_blank" class="btn-donate btn-paypal">💳 PayPal</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll de Libros -->
+    <section id="clasicos">
+      <h2 class="section-title">Libros Añadidos Recientemente</h2>
+      <div class="books-grid">
+
+        <!-- Libro 1 -->
+        <div class="book-card">
+          <img src="https://via.placeholder.com/200x280?text=Sherlock+Holmes" alt="Las Aventuras de Sherlock Holmes" class="book-cover">
+          <div class="book-info">
+            <h3>Las Aventuras de Sherlock Holmes</h3>
+            <p>Arthur Conan Doyle</p>
+          </div>
+          <a href="#" target="_blank" class="download-btn">Descargar PDF</a>
+        </div>
+
+        <!-- Libro 2 -->
+        <div class="book-card">
+          <img src="https://via.placeholder.com/200x280?text=20000+Leguas" alt="20.000 Leguas de Viaje Submarino" class="book-cover">
+          <div class="book-info">
+            <h3>20.000 Leguas de Viaje Submarino</h3>
+            <p>Julio Verne</p>
+          </div>
+          <a href="#" target="_blank" class="download-btn">Descargar PDF</a>
+        </div>
+
+        <!-- Libro 3 -->
+        <div class="book-card">
+          <img src="https://via.placeholder.com/200x280?text=Don+Quijote" alt="Don Quijote de la Mancha" class="book-cover">
+          <div class="book-info">
+            <h3>Don Quijote de la Mancha</h3>
+            <p>Miguel de Cervantes</p>
+          </div>
+          <a href="#" target="_blank" class="download-btn">Descargar PDF</a>
+        </div>
+
       </div>
     </section>
   </main>
