@@ -7,7 +7,7 @@
   <meta name="monetag" content="d0a0fd31583c75f52acb46fce08bbcff">
   <style>
     :root {
-      --bg-body-dark: #5c768d; /* Color oscuro para todo el fondo de abajo */
+      --bg-body-dark: #5c768d; /* Color gris/azul para todo el fondo de abajo */
       --header-light: #a0bccc; /* Color claro elegante para la parte superior */
       --salvador-blue: #0047AB; 
       --card-bg: #ffffff;
@@ -31,13 +31,13 @@
       min-height: 100vh;
     }
 
-    /* Parte superior en gris/azul claro elegante */
+    /* Encabezado */
     header {
       background-color: var(--header-light);
       display: flex;
       flex-direction: column;
       width: 100%;
-      border-top: 4px solid var(--salvador-blue); /* Línea superior decorativa */
+      border-top: 4px solid var(--salvador-blue);
     }
 
     .header-content {
@@ -45,7 +45,6 @@
       text-align: center;
     }
 
-    /* Logo "Bibliotes" corregido como la imagen 6 */
     .logo {
       font-family: "Times New Roman", Times, serif;
       font-size: 3.5rem;
@@ -55,7 +54,6 @@
       letter-spacing: -1px;
     }
 
-    /* "es" en bloque azul continuo y letras blancas */
     .logo .digital-es {
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 900;
@@ -66,7 +64,7 @@
       display: inline-block;
       letter-spacing: 0;
       margin-left: 2px;
-      transform: translateY(-3px); /* Ligero ajuste para alinear con Times New Roman */
+      transform: translateY(-3px);
     }
 
     .subtitle {
@@ -109,18 +107,89 @@
       flex: 1;
     }
 
+    /* Banner informativo */
+    .hero-banner {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 1.2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      border-left: 5px solid var(--salvador-blue);
+    }
+
+    .hero-banner p {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    /* Secciones Informativas en Recuadro */
+    .info-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .info-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.25rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--salvador-blue);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-card p, .info-card ul {
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    .info-card ul {
+      list-style-position: inside;
+      margin-top: 0.5rem;
+    }
+
+    .donation-links {
+      display: flex;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+
+    .btn-donate {
+      flex: 1;
+      text-align: center;
+      padding: 0.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: white;
+    }
+
+    .btn-coffee { background-color: #FFDD00; color: #000; }
+    .btn-paypal { background-color: #0070BA; }
+
+    /* Sección del Scroll de Libros */
     .section-title {
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 1.25rem;
-      color: #ffffff; /* Letras blancas para contrastar con el fondo oscuro */
+      color: #ffffff;
       border-left: 4px solid #ffffff;
       padding-left: 0.75rem;
     }
 
     .books-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 1.5rem;
       margin-bottom: 3rem;
     }
@@ -129,24 +198,33 @@
       background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 8px;
-      padding: 1.25rem;
+      padding: 1rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
 
+    .book-cover {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+      background-color: #e2e8f0;
+    }
+
     .book-info h3 {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 700;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.25rem;
       color: var(--text-main);
     }
 
     .book-info p {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: #64748b;
-      margin-bottom: 1rem;
+      margin-bottom: 0.8rem;
     }
 
     .download-btn {
@@ -155,9 +233,9 @@
       background-color: var(--salvador-blue);
       color: white;
       text-decoration: none;
-      padding: 0.6rem;
+      padding: 0.5rem;
       border-radius: 6px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 600;
       transition: background-color 0.2s;
     }
@@ -181,7 +259,6 @@
   <header>
     <div class="header-content">
       <div class="logo-container">
-        <!-- Logo unificado con caja azul -->
         <a href="#" class="logo">Bibliot<span class="digital-es">es</span></a>
       </div>
       <div class="subtitle">Biblioteca Electrónica El Salvador</div>
@@ -189,43 +266,80 @@
   </header>
 
   <nav>
-    <a href="#todos">Todos / Orden Alfabético</a>
-    <a href="#clasicos">Clásicos</a>
-    <a href="#novelas">Novelas</a>
-    <a href="#ciencia-ficcion">Ciencia Ficción</a>
-    <a href="#filosofia">Filosofía</a>
+    <a href="#genero">Libros por género</a>
+    <a href="#alfabetico">Orden alfabético</a>
+    <a href="#clasicos">Clásicos de la literatura</a>
     <a href="#esotericos">Esotéricos</a>
-    <a href="#misterio">Misterio y Conspiración</a>
-    <a href="#aventura">Aventura</a>
-    <a href="#academico">Académico y MINED</a>
-    <a href="#oficios">Oficios y Autodidacta</a>
+    <a href="#mined">Académicos/MINED</a>
+    <a href="#autodidacta">Oficios/Autodidacta</a>
+    <a href="#religiosos">Biblia/Religiosos</a>
   </nav>
 
   <main>
+    <!-- Banner Principal -->
+    <div class="hero-banner">
+      <p>Encuentra tu libro en versión PDF completamente gratis y en descarga directa desde Google Drive</p>
+    </div>
+
+    <!-- Recuadros de Información y Donación -->
+    <div class="info-boxes">
+      <div class="info-card">
+        <h3>¿Cómo descargar?</h3>
+        <p>Obtener tus libros es muy sencillo y rápido:</p>
+        <ul>
+          <li>Busca el título de tu preferencia en la biblioteca.</li>
+          <li>Haz clic en el botón <strong>Descargar PDF</strong>.</li>
+          <li>Accederás directamente al archivo en Google Drive para leerlo o guardarlo.</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Apoya el Proyecto</h3>
+        <p>Mantener este sitio libre de anuncios molestos y con descargas directas es posible gracias a tu colaboración voluntaria.</p>
+        <div class="donation-links">
+          <a href="#" target="_blank" class="btn-donate btn-coffee">☕ Buy Me a Coffee</a>
+          <a href="#" target="_blank" class="btn-donate btn-paypal">💳 PayPal</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll de Libros -->
     <section id="clasicos">
-      <h2 class="section-title">Libros Destacados</h2>
+      <h2 class="section-title">Libros Añadidos Recientemente</h2>
       <div class="books-grid">
+
+        <!-- Libro 1 -->
         <div class="book-card">
+          <!-- Reemplazar src con la URL de la imagen de portada -->
+          <img src="https://via.placeholder.com/200x280?text=Sherlock+Holmes" alt="Las Aventuras de Sherlock Holmes" class="book-cover">
           <div class="book-info">
             <h3>Las Aventuras de Sherlock Holmes</h3>
             <p>Arthur Conan Doyle</p>
           </div>
-          <a href="#" class="download-btn">Descargar PDF</a>
+          <!-- Reemplazar # con el enlace de descarga de Google Drive -->
+          <a href="#" target="_blank" class="download-btn">Descargar PDF</a>
         </div>
+
+        <!-- Libro 2 -->
         <div class="book-card">
+          <img src="https://via.placeholder.com/200x280?text=20000+Leguas" alt="20.000 Leguas de Viaje Submarino" class="book-cover">
           <div class="book-info">
             <h3>20.000 Leguas de Viaje Submarino</h3>
             <p>Julio Verne</p>
           </div>
-          <a href="#" class="download-btn">Descargar PDF</a>
+          <a href="#" target="_blank" class="download-btn">Descargar PDF</a>
         </div>
+
+        <!-- Libro 3 -->
         <div class="book-card">
+          <img src="https://via.placeholder.com/200x280?text=Don+Quijote" alt="Don Quijote de la Mancha" class="book-cover">
           <div class="book-info">
             <h3>Don Quijote de la Mancha</h3>
             <p>Miguel de Cervantes</p>
           </div>
-          <a href="#" class="download-btn">Descargar PDF</a>
+          <a href="#" target="_blank" class="download-btn">Descargar PDF</a>
         </div>
+
       </div>
     </section>
   </main>
