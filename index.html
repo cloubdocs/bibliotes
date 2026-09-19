@@ -10,6 +10,7 @@
       --bg-body-dark: #5c768d; /* Fondo gris/azul de la sección inferior */
       --header-light: #a0bccc; /* Fondo claro de la parte superior */
       --salvador-blue: #0047AB; 
+      --salvador-blue-hover: #003380;
       --bone-white: #f7f4ef;    /* Blanco hueso / crema suave para menús y tarjetas */
       --text-main: #1e293b;
       --border-color: #cbd5e1;
@@ -98,7 +99,7 @@
       color: var(--salvador-blue);
     }
 
-    /* Contenido */
+    /* Contenido Principal */
     main {
       max-width: 1100px;
       width: 100%;
@@ -107,11 +108,11 @@
       flex: 1;
     }
 
-    /* Banner informativo en Blanco Hueso */
+    /* Banner Informativo */
     .hero-banner {
       background: var(--bone-white);
       border-radius: 8px;
-      padding: 1.2rem;
+      padding: 1.25rem 1rem;
       text-align: center;
       margin-bottom: 1.5rem;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
@@ -122,6 +123,49 @@
       font-size: 1.05rem;
       font-weight: 600;
       color: #0f172a;
+    }
+
+    /* Botón Grande de Monetización (Enlace a Biblioteca en 2 Líneas) */
+    .main-cta-container {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .btn-main-library {
+      display: inline-block;
+      width: 100%;
+      max-width: 550px;
+      background-color: var(--salvador-blue);
+      color: #f8fafc;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.25);
+      transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-main-library:hover {
+      background-color: var(--salvador-blue-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px -2px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-main-library .line-title {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .btn-main-library .line-subtitle {
+      display: block;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #e2e8f0;
+      margin-top: 0.25rem;
     }
 
     /* Secciones Informativas en Recuadro (Blanco Hueso) */
@@ -242,7 +286,7 @@
     }
 
     .download-btn:hover {
-      background-color: #003380;
+      background-color: var(--salvador-blue-hover);
     }
 
     footer {
@@ -266,9 +310,10 @@
     </div>
   </header>
 
+  <!-- Menú con las 7 categorías definidas -->
   <nav>
     <a href="#genero">Libros por género</a>
-    <a href="#alfabetico">Orden alfabético</a>
+    <a href="#misterio">Misterio y Conspiración</a>
     <a href="#clasicos">Clásicos de la literatura</a>
     <a href="#esotericos">Esotéricos</a>
     <a href="#mined">Académicos/MINED</a>
@@ -277,9 +322,18 @@
   </nav>
 
   <main>
-    <!-- Banner Principal -->
+    <!-- Banner Informativo -->
     <div class="hero-banner">
       <p>Encuentra tu libro en versión PDF completamente gratis y en descarga directa desde Google Drive</p>
+    </div>
+
+    <!-- Botón Principal Promocional / Smartlink en 2 líneas -->
+    <div class="main-cta-container">
+      <!-- Reemplazar el '#' del href con tu Direct Link / Smartlink de Monetag -->
+      <a href="#" target="_blank" class="btn-main-library">
+        <span class="line-title">¡Vamos a la Biblioteca!</span>
+        <span class="line-subtitle">Descarga aquí</span>
+      </a>
     </div>
 
     <!-- Recuadros de Información y Donación -->
