@@ -7,11 +7,11 @@
   <meta name="monetag" content="d0a0fd31583c75f52acb46fce08bbcff">
   <style>
     :root {
-      --bg-color: #a0bccc; /* Gris/azul suave elegante para el fondo de abajo */
-      --header-dark: #5c768d; /* Gris mate de la cinta superior */
-      --text-main: #1e293b;
+      --bg-body-dark: #5c768d; /* Color oscuro para todo el fondo de abajo */
+      --header-light: #a0bccc; /* Color claro elegante para la parte superior */
       --salvador-blue: #0047AB; 
       --card-bg: #ffffff;
+      --text-main: #1e293b;
       --border-color: #cbd5e1;
     }
 
@@ -22,7 +22,7 @@
     }
 
     body {
-      background-color: var(--bg-color);
+      background-color: var(--bg-body-dark);
       color: var(--text-main);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.5;
@@ -31,45 +31,49 @@
       min-height: 100vh;
     }
 
-    /* Parte superior en gris claro mate */
+    /* Parte superior en gris/azul claro elegante */
     header {
-      background-color: var(--header-dark);
+      background-color: var(--header-light);
       display: flex;
       flex-direction: column;
       width: 100%;
-      border-bottom: 3px solid #4a6277;
+      border-top: 4px solid var(--salvador-blue); /* Línea superior decorativa */
     }
 
     .header-content {
-      background: #f8fafc;
-      padding: 1.5rem 1rem;
+      padding: 2rem 1rem;
       text-align: center;
-      border-bottom: 1px solid var(--border-color);
     }
 
-    /* Logo tipográfico limpio sin cajas ni franjas azules */
+    /* Logo "Bibliotes" corregido como la imagen 6 */
     .logo {
       font-family: "Times New Roman", Times, serif;
-      font-size: 3.2rem;
+      font-size: 3.5rem;
       font-weight: normal;
       color: #000000;
       text-decoration: none;
       letter-spacing: -1px;
     }
 
-    /* 'e' y 's' en Arial gruesa sin fondo azul */
+    /* "es" en bloque azul continuo y letras blancas */
     .logo .digital-es {
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 900;
-      color: #0047AB; /* Texto azul salvadoreño sin caja de fondo */
-      letter-spacing: -1px;
+      color: #ffffff;
+      background-color: var(--salvador-blue);
+      padding: 0 10px;
+      border-radius: 6px;
+      display: inline-block;
+      letter-spacing: 0;
+      margin-left: 2px;
+      transform: translateY(-3px); /* Ligero ajuste para alinear con Times New Roman */
     }
 
     .subtitle {
       font-family: "Times New Roman", Times, serif;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       color: #000000;
-      margin-top: 0.25rem;
+      margin-top: 0.5rem;
       font-weight: normal;
     }
 
@@ -109,8 +113,8 @@
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 1.25rem;
-      color: #0f172a;
-      border-left: 4px solid var(--salvador-blue);
+      color: #ffffff; /* Letras blancas para contrastar con el fondo oscuro */
+      border-left: 4px solid #ffffff;
       padding-left: 0.75rem;
     }
 
@@ -129,7 +133,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     }
 
     .book-info h3 {
@@ -177,6 +181,7 @@
   <header>
     <div class="header-content">
       <div class="logo-container">
+        <!-- Logo unificado con caja azul -->
         <a href="#" class="logo">Bibliot<span class="digital-es">es</span></a>
       </div>
       <div class="subtitle">Biblioteca Electrónica El Salvador</div>
