@@ -8,10 +8,10 @@
   <meta name="monetag" content="d0a0fd31583c75f52acb46fce08bbcff">
   <style>
     :root {
-      --bg-color: #f8fafc;
+      --bg-color: #f1f3f5; /* Gris claro elegante para el scroll */
+      --header-dark: #2b2d42; /* Gris oscuro mate para la cinta superior */
       --text-main: #1e293b;
-      --salvador-blue: #0047AB; /* Azul de la bandera */
-      --salvador-white: #ffffff;
+      --salvador-blue: #0047AB; /* Azul El Salvador */
       --card-bg: #ffffff;
       --border-color: #e2e8f0;
     }
@@ -32,32 +32,20 @@
       min-height: 100vh;
     }
 
-    /* Header con franjas de la bandera de El Salvador */
+    /* Cinta superior en gris oscuro mate */
     header {
+      background-color: var(--header-dark);
       display: flex;
       flex-direction: column;
       width: 100%;
-    }
-
-    .flag-stripe {
-      height: 18px;
-      width: 100%;
-    }
-
-    .stripe-blue {
-      background-color: var(--salvador-blue);
-    }
-
-    .stripe-white {
-      background-color: var(--salvador-white);
-      border-top: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 3px solid var(--salvador-blue);
     }
 
     .header-content {
       background: var(--card-bg);
       padding: 1.5rem 1rem;
       text-align: center;
+      border-bottom: 1px solid var(--border-color);
     }
 
     .logo {
@@ -69,7 +57,7 @@
       letter-spacing: -1px;
     }
 
-    /* Las letras 'e' y 's' en Arial gruesa y blanca con fondo azul */
+    /* La letra 'e' y la 's' en Arial gruesa y blanca con fondo azul */
     .logo .digital-char {
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 900;
@@ -88,13 +76,13 @@
       font-weight: normal;
     }
 
-    /* Menú de Navegación */
+    /* Menú de Navegación completo y adaptable */
     nav {
       background: var(--card-bg);
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      padding: 0.75rem 1rem;
+      gap: 1.2rem;
+      padding: 0.85rem 1rem;
       border-bottom: 1px solid var(--border-color);
       flex-wrap: wrap;
     }
@@ -102,7 +90,7 @@
     nav a {
       color: #475569;
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 600;
       transition: color 0.2s;
     }
@@ -113,7 +101,7 @@
 
     /* Contenido Principal */
     main {
-      max-width: 1000px;
+      max-width: 1100px;
       width: 100%;
       margin: 2rem auto;
       padding: 0 1rem;
@@ -144,6 +132,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
     }
 
     .book-info h3 {
@@ -169,6 +158,7 @@
       border-radius: 6px;
       font-size: 0.9rem;
       font-weight: 600;
+      transition: background-color 0.2s;
     }
 
     .download-btn:hover {
@@ -188,26 +178,26 @@
 <body>
 
   <header>
-    <!-- Franjas de la bandera de El Salvador -->
-    <div class="flag-stripe stripe-blue"></div>
-    <div class="flag-stripe stripe-white"></div>
-    <div class="flag-stripe stripe-blue"></div>
-
     <div class="header-content">
       <div class="logo-container">
-        <!-- Logo con 'e' y 's' en Arial gruesa y blanca -->
-        <a href="#" class="logo">Bibliot<span class="digital-char">e</span>t<span class="digital-char">s</span></a>
+        <!-- Logo en Times New Roman con 'e' y 's' en Arial blanca gruesa -->
+        <a href="#" class="logo">Bibliot<span class="digital-char">e</span><span class="digital-char">s</span></a>
       </div>
       <div class="subtitle">Biblioteca Electrónica El Salvador</div>
     </div>
   </header>
 
   <nav>
-    <a href="#todos">Todos</a>
-    <a href="#aventura">Aventura</a>
+    <a href="#todos">Todos / Orden Alfabético</a>
     <a href="#clasicos">Clásicos</a>
-    <a href="#misterio">Misterio</a>
+    <a href="#novelas">Novelas</a>
+    <a href="#ciencia-ficcion">Ciencia Ficción</a>
     <a href="#filosofia">Filosofía</a>
+    <a href="#esotericos">Esotéricos</a>
+    <a href="#misterio">Misterio y Conspiración</a>
+    <a href="#aventura">Aventura</a>
+    <a href="#academico">Académico y MINED</a>
+    <a href="#oficios">Oficios y Autodidacta</a>
   </nav>
 
   <main>
