@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - Bibliotes</title>
+  <style>
+    :root {
+      --bg-body-dark: #5c768d;
+      --header-light: #a0bccc;
+      --salvador-blue: #0047AB; 
+      --bone-white: #f7f4ef;
+      --alphabet-bg: #e2e8f0;
+      --border-color: #cbd5e1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg-body-dark); font-family: -apple-system, sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
+    
+    /* Encabezado con logo corregido */
+    header { background-color: var(--header-light); text-align: center; padding: 1.5rem; border-top: 4px solid var(--salvador-blue); }
+    .logo { font-family: "Times New Roman", Times, serif; font-size: 3.5rem; color: #000000; text-decoration: none; letter-spacing: -1px; }
+    .logo .digital-es { font-family: Arial, sans-serif; font-weight: 900; color: #ffffff; background-color: var(--salvador-blue); padding: 0 10px; border-radius: 6px; display: inline-block; margin-left: 2px; transform: translateY(-3px); }
+
+    main { max-width: 1100px; width: 100%; margin: 2rem auto; padding: 0 1rem; flex: 1; }
+
+    /* Sección del abecedario */
+    .alphabet-section { background-color: var(--alphabet-bg); border-radius: 12px; padding: 3rem 2rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.15); margin-bottom: 2rem; }
+    .alphabet-title { font-family: "Times New Roman", Times, serif; font-weight: bold; font-size: 1.8rem; color: #0f172a; text-align: center; margin-bottom: 2.5rem; }
+    
+    .alphabet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(75px, 1fr)); gap: 1.5rem; justify-items: center; }
+    .book-item { display: flex; align-items: center; justify-content: center; width: 70px; height: 95px; background: #b0c4de; border-radius: 4px 8px 8px 4px; box-shadow: -4px 0 0 #4682b4, 3px 4px 8px rgba(0,0,0,0.15); color: #0f172a; font-family: "Times New Roman", Times, serif; font-weight: bold; font-size: 2.2rem; text-decoration: none; position: relative; transition: transform 0.2s; }
+    .book-item::after { content: ""; position: absolute; left: 6px; top: 0; bottom: 0; width: 2px; background: rgba(0,0,0,0.15); }
+    .book-item:hover { transform: translateY(-5px) scale(1.05); background: #9ab4d0; box-shadow: -4px 0 0 #315b7d, 4px 8px 12px rgba(0,0,0,0.25); }
+
+    footer { background: var(--bone-white); text-align: center; padding: 1.5rem; color: #64748b; margin-top: auto; border-top: 1px solid var(--border-color); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Bibliot<span class="digital-es">es</span></a>
+  </header>
+
+  <main>
+    <section class="alphabet-section">
+      <h2 class="alphabet-title">escoge el libro que buscas por orden alfabetico</h2>
+      <div class="alphabet-grid">
+        <a href="#letra-a" class="book-item">A</a><a href="#letra-b" class="book-item">B</a>
+        <a href="#letra-c" class="book-item">C</a><a href="#letra-d" class="book-item">D</a>
+        <a href="#letra-e" class="book-item">E</a><a href="#letra-f" class="book-item">F</a>
+        <a href="#letra-g" class="book-item">G</a><a href="#letra-h" class="book-item">H</a>
+        <a href="#letra-i" class="book-item">I</a><a href="#letra-j" class="book-item">J</a>
+        <a href="#letra-k" class="book-item">K</a><a href="#letra-l" class="book-item">L</a>
+        <a href="#letra-m" class="book-item">M</a><a href="#letra-n" class="book-item">N</a>
+        <a href="#letra-nn" class="book-item">Ñ</a><a href="#letra-o" class="book-item">O</a>
+        <a href="#letra-p" class="book-item">P</a><a href="#letra-q" class="book-item">Q</a>
+        <a href="#letra-r" class="book-item">R</a><a href="#letra-s" class="book-item">S</a>
+        <a href="#letra-t" class="book-item">T</a><a href="#letra-u" class="book-item">U</a>
+        <a href="#letra-v" class="book-item">V</a><a href="#letra-w" class="book-item">W</a>
+        <a href="#letra-x" class="book-item">X</a><a href="#letra-y" class="book-item">Y</a>
+        <a href="#letra-z" class="book-item">Z</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Bibliotes • Dominio Público y Contenido Abierto</p>
+  </footer>
+
+</body>
+</html>
