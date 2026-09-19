@@ -14,12 +14,21 @@
       --bone-white: #f7f4ef;    /* Blanco hueso / crema suave para menús y tarjetas */
       --text-main: #1e293b;
       --border-color: #cbd5e1;
+      
+      /* Colores para la sección del Abecedario */
+      --alphabet-bg: #e2e8f0;            /* Fondo gris claro minimalista */
+      --book-blue-light: #94a3b8;        /* Azul claro elegante para tomos */
+      --book-blue-light-hover: #64748b;  /* Azul al pasar el cursor */
     }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -128,7 +137,7 @@
     /* Botón Grande de Monetización (Enlace a Biblioteca en 2 Líneas) */
     .main-cta-container {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
     .btn-main-library {
@@ -166,6 +175,71 @@
       font-weight: 500;
       color: #e2e8f0;
       margin-top: 0.25rem;
+    }
+
+    /* NUEVA SECCIÓN: Catálogo por Orden Alfabético (A-Z) */
+    .alphabet-section {
+      background-color: var(--alphabet-bg);
+      border-radius: 12px;
+      padding: 2.5rem 1.5rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+      border: 1px solid var(--border-color);
+    }
+
+    .alphabet-title {
+      font-family: "Times New Roman", Times, serif;
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: #0f172a;
+      text-align: center;
+      margin-bottom: 2rem;
+      letter-spacing: -0.5px;
+    }
+
+    .alphabet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+      gap: 1.2rem;
+      justify-items: center;
+    }
+
+    /* Diseño Minimalista de Libros para las Letras */
+    .book-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 95px;
+      background: #b0c4de; /* Azul claro elegante minimalista */
+      border-radius: 4px 8px 8px 4px;
+      box-shadow: -4px 0 0 #4682b4, 3px 4px 8px rgba(0, 0, 0, 0.15); /* Lomo y sombra */
+      color: #0f172a;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: bold;
+      font-size: 2.2rem;
+      text-decoration: none;
+      position: relative;
+      transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .book-item::after {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(0, 0, 0, 0.15); /* Línea decorativa del lomo */
+    }
+
+    .book-item:hover {
+      transform: translateY(-5px) scale(1.05);
+      background: #9ab4d0;
+      box-shadow: -4px 0 0 #315b7d, 4px 8px 12px rgba(0, 0, 0, 0.25);
     }
 
     /* Secciones Informativas en Recuadro (Blanco Hueso) */
@@ -329,12 +403,47 @@
 
     <!-- Botón Principal Promocional / Smartlink en 2 líneas -->
     <div class="main-cta-container">
-      <!-- Reemplazar el '#' del href con tu Direct Link / Smartlink de Monetag -->
-      <a href="https://omg10.com/4/11836399" target="_blank" class="btn-main-library">
+      <!-- Reemplazar '#' por la URL de tu Smartlink de Monetag -->
+      <a href="#catalogo-alfabetico" class="btn-main-library">
         <span class="line-title">¡Vamos a la Biblioteca!</span>
         <span class="line-subtitle">Descarga aquí</span>
       </a>
     </div>
+
+    <!-- VISTA INTERACTIVA: Catálogo por Orden Alfabético (27 Letras) -->
+    <section id="catalogo-alfabetico" class="alphabet-section">
+      <h2 class="alphabet-title">escoge el libro que buscas por orden alfabetico</h2>
+      
+      <div class="alphabet-grid">
+        <a href="#letra-a" class="book-item">A</a>
+        <a href="#letra-b" class="book-item">B</a>
+        <a href="#letra-c" class="book-item">C</a>
+        <a href="#letra-d" class="book-item">D</a>
+        <a href="#letra-e" class="book-item">E</a>
+        <a href="#letra-f" class="book-item">F</a>
+        <a href="#letra-g" class="book-item">G</a>
+        <a href="#letra-h" class="book-item">H</a>
+        <a href="#letra-i" class="book-item">I</a>
+        <a href="#letra-j" class="book-item">J</a>
+        <a href="#letra-k" class="book-item">K</a>
+        <a href="#letra-l" class="book-item">L</a>
+        <a href="#letra-m" class="book-item">M</a>
+        <a href="#letra-n" class="book-item">N</a>
+        <a href="#letra-nn" class="book-item">Ñ</a>
+        <a href="#letra-o" class="book-item">O</a>
+        <a href="#letra-p" class="book-item">P</a>
+        <a href="#letra-q" class="book-item">Q</a>
+        <a href="#letra-r" class="book-item">R</a>
+        <a href="#letra-s" class="book-item">S</a>
+        <a href="#letra-t" class="book-item">T</a>
+        <a href="#letra-u" class="book-item">U</a>
+        <a href="#letra-v" class="book-item">V</a>
+        <a href="#letra-w" class="book-item">W</a>
+        <a href="#letra-x" class="book-item">X</a>
+        <a href="#letra-y" class="book-item">Y</a>
+        <a href="#letra-z" class="book-item">Z</a>
+      </div>
+    </section>
 
     <!-- Recuadros de Información y Donación -->
     <div class="info-boxes">
