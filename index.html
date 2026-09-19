@@ -7,12 +7,12 @@
   <meta name="monetag" content="d0a0fd31583c75f52acb46fce08bbcff">
   <style>
     :root {
-      --bg-color: #f1f3f5; /* Fondo gris claro elegante */
-      --header-dark: #2b2d42; /* Cinta superior gris oscuro mate */
+      --bg-color: #a0bccc; /* Gris/azul suave elegante para el fondo de abajo */
+      --header-dark: #5c768d; /* Gris mate de la cinta superior */
       --text-main: #1e293b;
       --salvador-blue: #0047AB; 
       --card-bg: #ffffff;
-      --border-color: #e2e8f0;
+      --border-color: #cbd5e1;
     }
 
     * {
@@ -31,42 +31,38 @@
       min-height: 100vh;
     }
 
-    /* Cinta superior */
+    /* Parte superior en gris claro mate */
     header {
       background-color: var(--header-dark);
       display: flex;
       flex-direction: column;
       width: 100%;
-      border-bottom: 4px solid var(--salvador-blue);
+      border-bottom: 3px solid #4a6277;
     }
 
     .header-content {
-      background: var(--card-bg);
+      background: #f8fafc;
       padding: 1.5rem 1rem;
       text-align: center;
       border-bottom: 1px solid var(--border-color);
     }
 
-    /* Logo corregido */
+    /* Logo tipográfico limpio sin cajas ni franjas azules */
     .logo {
       font-family: "Times New Roman", Times, serif;
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: normal;
       color: #000000;
       text-decoration: none;
       letter-spacing: -1px;
     }
 
+    /* 'e' y 's' en Arial gruesa sin fondo azul */
     .logo .digital-es {
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 900;
-      color: #ffffff;
-      background-color: var(--salvador-blue);
-      padding: 0 8px; /* Un solo bloque azul continuo */
-      border-radius: 4px;
-      display: inline-block;
-      letter-spacing: 0;
-      margin-left: 2px;
+      color: #0047AB; /* Texto azul salvadoreño sin caja de fondo */
+      letter-spacing: -1px;
     }
 
     .subtitle {
@@ -79,7 +75,7 @@
 
     /* Menú de Navegación */
     nav {
-      background: var(--card-bg);
+      background: #ffffff;
       display: flex;
       justify-content: center;
       gap: 1.2rem;
@@ -89,7 +85,7 @@
     }
 
     nav a {
-      color: #475569;
+      color: #334155;
       text-decoration: none;
       font-size: 0.9rem;
       font-weight: 600;
@@ -113,7 +109,7 @@
       font-size: 1.25rem;
       font-weight: 700;
       margin-bottom: 1.25rem;
-      color: var(--text-main);
+      color: #0f172a;
       border-left: 4px solid var(--salvador-blue);
       padding-left: 0.75rem;
     }
@@ -133,7 +129,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
     }
 
     .book-info h3 {
@@ -167,7 +163,7 @@
     }
 
     footer {
-      background: var(--card-bg);
+      background: #ffffff;
       border-top: 1px solid var(--border-color);
       text-align: center;
       padding: 1.5rem;
@@ -181,7 +177,6 @@
   <header>
     <div class="header-content">
       <div class="logo-container">
-        <!-- Logo corregido sin la "t" y con bloque unificado -->
         <a href="#" class="logo">Bibliot<span class="digital-es">es</span></a>
       </div>
       <div class="subtitle">Biblioteca Electrónica El Salvador</div>
