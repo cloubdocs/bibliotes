@@ -7,10 +7,10 @@
   <meta name="monetag" content="d0a0fd31583c75f52acb46fce08bbcff">
   <style>
     :root {
-      --bg-body-dark: #5c768d; /* Color gris/azul para todo el fondo de abajo */
-      --header-light: #a0bccc; /* Color claro elegante para la parte superior */
+      --bg-body-dark: #5c768d; /* Fondo gris/azul de la sección inferior */
+      --header-light: #a0bccc; /* Fondo claro de la parte superior */
       --salvador-blue: #0047AB; 
-      --card-bg: #ffffff;
+      --bone-white: #f7f4ef;    /* Blanco hueso / crema suave para menús y tarjetas */
       --text-main: #1e293b;
       --border-color: #cbd5e1;
     }
@@ -75,9 +75,9 @@
       font-weight: normal;
     }
 
-    /* Menú de Navegación */
+    /* Menú de Navegación en Blanco Hueso */
     nav {
-      background: #ffffff;
+      background: var(--bone-white);
       display: flex;
       justify-content: center;
       gap: 1.2rem;
@@ -107,9 +107,9 @@
       flex: 1;
     }
 
-    /* Banner informativo */
+    /* Banner informativo en Blanco Hueso */
     .hero-banner {
-      background: #ffffff;
+      background: var(--bone-white);
       border-radius: 8px;
       padding: 1.2rem;
       text-align: center;
@@ -124,7 +124,7 @@
       color: #0f172a;
     }
 
-    /* Secciones Informativas en Recuadro */
+    /* Secciones Informativas en Recuadro (Blanco Hueso) */
     .info-boxes {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -133,7 +133,7 @@
     }
 
     .info-card {
-      background: #ffffff;
+      background: var(--bone-white);
       border: 1px solid var(--border-color);
       border-radius: 8px;
       padding: 1.25rem;
@@ -194,8 +194,9 @@
       margin-bottom: 3rem;
     }
 
+    /* Tarjetas de Libros en Blanco Hueso */
     .book-card {
-      background: var(--card-bg);
+      background: var(--bone-white);
       border: 1px solid var(--border-color);
       border-radius: 8px;
       padding: 1rem;
@@ -245,7 +246,7 @@
     }
 
     footer {
-      background: #ffffff;
+      background: var(--bone-white);
       border-top: 1px solid var(--border-color);
       text-align: center;
       padding: 1.5rem;
@@ -310,13 +311,11 @@
 
         <!-- Libro 1 -->
         <div class="book-card">
-          <!-- Reemplazar src con la URL de la imagen de portada -->
           <img src="https://via.placeholder.com/200x280?text=Sherlock+Holmes" alt="Las Aventuras de Sherlock Holmes" class="book-cover">
           <div class="book-info">
             <h3>Las Aventuras de Sherlock Holmes</h3>
             <p>Arthur Conan Doyle</p>
           </div>
-          <!-- Reemplazar # con el enlace de descarga de Google Drive -->
           <a href="#" target="_blank" class="download-btn">Descargar PDF</a>
         </div>
 
