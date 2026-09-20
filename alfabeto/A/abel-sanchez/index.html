@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abel Sanchez - Bibliotes</title>
+  <style>
+    :root { --bg-body-dark: #5c768d; --header-light: #a0bccc; --salvador-blue: #0047AB; --salvador-blue-hover: #003380; --bone-white: #f7f4ef; --text-main: #1e293b; --border-color: #cbd5e1; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg-body-dark); color: var(--text-main); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+    header { background-color: var(--header-light); display: flex; flex-direction: column; width: 100%; border-top: 4px solid var(--salvador-blue); }
+    .header-content { padding: 2rem 1rem; text-align: center; }
+    .logo { font-family: "Times New Roman", Times, serif; font-size: 3.5rem; font-weight: normal; color: #000; text-decoration: none; letter-spacing: -1px; }
+    .logo .digital-es { font-family: Arial, Helvetica, sans-serif; font-weight: 900; color: #fff; background-color: var(--salvador-blue); padding: 0 10px; border-radius: 6px; display: inline-block; letter-spacing: 0; margin-left: 2px; transform: translateY(-3px); }
+    .subtitle { font-family: "Times New Roman", Times, serif; font-size: 1.2rem; color: #000; margin-top: 0.5rem; }
+    nav { background: var(--bone-white); display: flex; justify-content: center; gap: 1.2rem; padding: 0.85rem 1rem; border-bottom: 1px solid var(--border-color); flex-wrap: wrap; }
+    nav a { color: #334155; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+    main { max-width: 900px; width: 100%; margin: 2rem auto; padding: 0 1rem; flex: 1; }
+    .book-card { background: var(--bone-white); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); display: grid; grid-template-columns: minmax(180px, 260px) 1fr; gap: 2rem; align-items: start; }
+    .book-cover { width: 100%; border-radius: 4px; background: #e2e8f0; }
+    h1 { color: var(--salvador-blue); font-family: "Times New Roman", Times, serif; font-size: 2.2rem; margin-bottom: 0.35rem; }
+    .author { color: #64748b; font-weight: 600; margin-bottom: 1.25rem; }
+    .synopsis { margin-bottom: 1.5rem; }
+    .download-btn { display: block; text-align: center; background-color: var(--salvador-blue); color: #fff; text-decoration: none; padding: 1rem; border-radius: 8px; font-size: 1rem; font-weight: 800; transition: background-color 0.2s, transform 0.2s; }
+    .download-btn:hover { background-color: var(--salvador-blue-hover); transform: translateY(-2px); }
+    footer { background: var(--bone-white); border-top: 1px solid var(--border-color); text-align: center; padding: 1.5rem; font-size: 0.85rem; color: #64748b; }
+    @media (max-width: 650px) { .logo { font-size: 2.8rem; } .book-card { grid-template-columns: 1fr; } .book-cover { max-width: 260px; justify-self: center; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content" style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+      <img src="../../../personaje.png" alt="Personaje Bibliotes" style="width: 85px; height: auto; object-fit: contain;">
+      <div style="text-align: left;"><div class="logo-container"><a href="/index.html" class="logo">Bibliot<span class="digital-es">es</span></a></div><div class="subtitle" style="margin-top: 4px;">Biblioteca Electrónica El Salvador</div></div>
+    </div>
+  </header>
+  <nav><a href="/biblioteca.html">Biblioteca</a><a href="/alfabeto/A/">Libros con A</a><a href="/index.html">Inicio</a></nav>
+
+  <main>
+    <article class="book-card">
+      <img class="book-cover" src="https://via.placeholder.com/260x380?text=Abel+Sanchez" alt="Portada de ejemplo de Abel Sanchez">
+      <div>
+        <h1>Abel Sanchez</h1>
+        <p class="author">Miguel de Unamuno</p>
+        <p class="synopsis">Una novela sobre la amistad, la rivalidad y los celos que explora el conflicto interior de sus dos protagonistas a lo largo de sus vidas.</p>
+        <a class="download-btn" href="#" onclick="descargarLibro(event)">DESCARGA DIRECTA PDF</a>
+      </div>
+    </article>
+  </main>
+
+  <footer><p>&copy; 2026 Bibliotes • Dominio Público y Contenido Abierto</p></footer>
+
+  <script>
+    const DIRECTLINK_AQUI = 'DIRECTLINK_AQUI';
+    const ID_AQUI = 'ID_AQUI';
+
+    function descargarLibro(event) {
+      event.preventDefault();
+      window.open('DIRECTLINK_AQUI', '_blank');
+      window.location.href = 'https://drive.google.com/uc?export=download&id=ID_AQUI';
+    }
+  </script>
+</body>
+</html>

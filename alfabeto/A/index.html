@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libros con A - Bibliotes</title>
+  <style>
+    :root {
+      --bg-body-dark: #5c768d;
+      --header-light: #a0bccc;
+      --salvador-blue: #0047AB;
+      --salvador-blue-hover: #003380;
+      --bone-white: #f7f4ef;
+      --text-main: #1e293b;
+      --border-color: #cbd5e1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg-body-dark); color: var(--text-main); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+    header { background-color: var(--header-light); display: flex; flex-direction: column; width: 100%; border-top: 4px solid var(--salvador-blue); }
+    .header-content { padding: 2rem 1rem; text-align: center; }
+    .logo { font-family: "Times New Roman", Times, serif; font-size: 3.5rem; font-weight: normal; color: #000000; text-decoration: none; letter-spacing: -1px; }
+    .logo .digital-es { font-family: Arial, Helvetica, sans-serif; font-weight: 900; color: #ffffff; background-color: var(--salvador-blue); padding: 0 10px; border-radius: 6px; display: inline-block; letter-spacing: 0; margin-left: 2px; transform: translateY(-3px); }
+    .subtitle { font-family: "Times New Roman", Times, serif; font-size: 1.2rem; color: #000000; margin-top: 0.5rem; font-weight: normal; }
+    nav { background: var(--bone-white); display: flex; justify-content: center; gap: 1.2rem; padding: 0.85rem 1rem; border-bottom: 1px solid var(--border-color); flex-wrap: wrap; }
+    nav a { color: #334155; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s; }
+    nav a:hover { color: var(--salvador-blue); }
+    main { max-width: 1100px; width: 100%; margin: 2rem auto; padding: 0 1rem; flex: 1; }
+    .hero-banner { background: var(--bone-white); border-radius: 8px; padding: 1.25rem 1rem; text-align: center; margin-bottom: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); border-left: 5px solid var(--salvador-blue); }
+    .hero-banner p { font-size: 1.05rem; font-weight: 600; color: #0f172a; }
+    .book-list { background: var(--bone-white); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem 2rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+    .book-list h1 { color: var(--salvador-blue); font-family: "Times New Roman", Times, serif; font-size: 1.8rem; margin-bottom: 1rem; }
+    .book-list ul { list-style-position: inside; }
+    .book-list li { border-bottom: 1px solid var(--border-color); padding: 0.8rem 0; }
+    .book-list li:last-child { border-bottom: 0; }
+    .book-list a { color: #334155; font-weight: 600; text-decoration: none; }
+    .book-list a:hover { color: var(--salvador-blue); text-decoration: underline; }
+    footer { background: var(--bone-white); border-top: 1px solid var(--border-color); text-align: center; padding: 1.5rem; font-size: 0.85rem; color: #64748b; }
+    @media (max-width: 600px) { .logo { font-size: 2.8rem; } .book-list { padding: 1.25rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content" style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+      <img src="../../../personaje.png" alt="Personaje Bibliotes" style="width: 85px; height: auto; object-fit: contain;">
+      <div style="text-align: left;">
+        <div class="logo-container"><a href="/index.html" class="logo">Bibliot<span class="digital-es">es</span></a></div>
+        <div class="subtitle" style="margin-top: 4px;">Biblioteca Electrónica El Salvador</div>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="/biblioteca.html">Biblioteca</a>
+    <a href="/alfabeto/A/">Libros con A</a>
+    <a href="/index.html">Inicio</a>
+  </nav>
+
+  <main>
+    <div class="hero-banner"><p>LIBROS DISPONIBLES EN LA LETRA A</p></div>
+    <section class="book-list">
+      <h1>Catálogo de libros con A</h1>
+      <ul>
+        <li><a href="/alfabeto/A/a-traves-del-espejo-y-lo-que-alicia-encontro/index.html">A traves del espejo y lo que Alicia encontro</a></li>
+        <li><a href="/alfabeto/A/abel-sanchez/index.html">Abel Sanchez</a></li>
+        <li><a href="/alfabeto/A/alicia-en-el-pais-de-las-maravillas/index.html">Alicia en el pais de las maravillas</a></li>
+        <li><a href="/alfabeto/A/amor-y-pedagogia/index.html">Amor y pedagogia</a></li>
+        <li><a href="/alfabeto/A/andanzas-y-malandanzas/index.html">Andanzas y malandanzas</a></li>
+        <li><a href="/alfabeto/A/andanzas-y-visiones/index.html">Andanzas y visiones</a></li>
+        <li><a href="/alfabeto/A/aves-sin-nido/index.html">Aves sin nido</a></li>
+        <li><a href="/alfabeto/A/el-arbol-de-la-ciencia/index.html">El arbol de la ciencia</a></li>
+        <li><a href="/alfabeto/A/las-aves/index.html">Las aves</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer><p>&copy; 2026 Bibliotes • Dominio Público y Contenido Abierto</p></footer>
+</body>
+</html>
