@@ -87,6 +87,29 @@
       flex-wrap: wrap;
     }
 
+    .quick-links {
+      gap: 1rem;
+    }
+
+    .quick-links a {
+      padding: 0.35rem 0.75rem;
+    }
+
+    @media (max-width: 600px) {
+      .quick-links {
+        min-height: 50px;
+        max-height: 50px;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.25rem 0.5rem;
+      }
+
+      .quick-links a {
+        padding: 0.2rem 0.35rem;
+        font-size: 0.78rem;
+      }
+    }
+
     nav a {
       color: #334155;
       text-decoration: none;
@@ -318,15 +341,9 @@
   </div>
 </header>
 
-  <!-- Menú con las 7 categorías definidas -->
-  <nav>
-    <a href="#genero">Libros por género</a>
-    <a href="#misterio">Misterio y Conspiración</a>
-    <a href="#clasicos">Clásicos de la literatura</a>
-    <a href="#esotericos">Esotéricos</a>
-    <a href="#mined">Académicos/MINED</a>
-    <a href="#autodidacta">Oficios/Autodidacta</a>
-    <a href="#religiosos">Biblia/Religiosos</a>
+  <nav class="quick-links">
+    <a href="/bibliotes/generos/">Libros por Genero</a>
+    <a href="/bibliotes/donacion/">Apoya el Proyecto / Donacion</a>
   </nav>
 
   <main>
