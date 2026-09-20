@@ -44,7 +44,7 @@
 
 <main>
   <section class="alphabet-section">
-    <h2 class="alphabet-title">Catálogo de libros con A</h2>
+    <h2 class="alphabet-title" id="titulo-catalogo">Catálogo de libros con A</h2>
     <div class="book-grid">
       <a class="book-card" href="/bibliotes/alfabeto/A/a-traves-del-espejo-y-lo-que-alicia-encontro/">A traves del espejo y lo que Alicia encontro</a>
       <a class="book-card" href="/bibliotes/alfabeto/A/abel-sanchez/">Abel Sanchez</a>
@@ -62,5 +62,12 @@
 <footer>
   <p>&copy; 2026 Bibliotes • Dominio Público y Contenido Abierto</p>
 </footer>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const total = document.querySelectorAll('.book-card').length;
+  const titulo = document.getElementById('titulo-catalogo');
+  titulo.textContent = `Catálogo de libros con A (${total})`;
+});
+</script>
 </body>
 </html>
