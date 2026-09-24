@@ -34,21 +34,46 @@
 
     /* Encabezado */
     header {
-      background-color: var(--header-light);
+      background-color: #a8bdd1;
       display: flex;
       flex-direction: column;
       width: 100%;
       border-top: 4px solid var(--salvador-blue);
+      padding: 14px 16px 10px 16px;
+      min-height: auto;
     }
 
     .header-content {
-      padding: 2rem 1rem;
+      display: flex !important;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center !important;
+      gap: 12px !important;
+      width: 100%;
+      padding: 0 !important;
       text-align: center;
+    }
+
+    .header-content > img {
+      width: 85px !important;
+      height: auto;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+
+    .header-content > div:last-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      text-align: center !important;
     }
 
     .logo {
       font-family: "Times New Roman", Times, serif;
-      font-size: 3.5rem;
+      font-size: clamp(2.2rem, 8vw, 3.5rem);
       font-weight: normal;
       color: #000000;
       text-decoration: none;
@@ -70,9 +95,9 @@
 
     .subtitle {
       font-family: "Times New Roman", Times, serif;
-      font-size: 1.2rem;
+      font-size: clamp(14px, 3.5vw, 18px);
       color: #000000;
-      margin-top: 0.5rem;
+      margin-top: 4px !important;
       font-weight: normal;
       text-align: center;
     }
@@ -111,6 +136,10 @@
     }
 
     @media (max-width: 600px) {
+      .header-content > img {
+        width: 62px !important;
+      }
+
       .quick-links {
         min-height: 50px;
         max-height: 50px;
@@ -148,23 +177,44 @@
 
     /* Banner Informativo */
     .announcement-copy {
-      display: block;
-      max-width: 900px;
-      margin: 0 auto 1rem;
+      display: inline-block;
+      max-width: 100%;
+      margin: 6px 0 0;
       text-align: center;
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: #0f172a;
-      letter-spacing: 0.15px;
-      line-height: 1.5;
+      font-size: 0;
+      line-height: 1.2;
       text-transform: uppercase;
-      padding: 0 1rem;
+      background: #d6e2f0;
+      border: 1.5px dashed #5a7fa6;
+      border-radius: 8px;
+      padding: 6px 12px;
+    }
+
+    .announcement-copy::before {
+      content: "ENCUENTRA TU LIBRO EN VERSIÓN PDF COMPLETAMENTE GRATIS Y\AEN DESCARGA DIRECTA DESDE GOOGLE DRIVE";
+      display: block;
+      white-space: pre;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      line-height: 1.2;
+      color: #2c3e50;
     }
 
     /* Botón Grande de Monetización (Enlace a Biblioteca en 2 Líneas) */
     .main-cta-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      background: #5a6e82;
+      padding: 20px 16px;
       text-align: center;
-      margin-bottom: 2rem;
+      margin: 0;
+    }
+
+    .main-cta-container + .main-cta-container {
+      margin-top: 0;
     }
 
     .btn-main-library {
@@ -208,20 +258,20 @@
       display: inline-block;
       width: 100%;
       max-width: 550px;
-      background-color: #ffffff;
-      color: var(--salvador-blue);
+      background-color: #ffcc33;
+      color: #1a2e44;
       text-decoration: none;
       padding: 1rem 1.5rem;
       border-radius: 10px;
       box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.2);
       transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-      border: 2px solid var(--salvador-blue);
+      border: 1.5px solid #b8960c;
       text-align: center;
-      margin-top: 1rem;
+      margin-top: 12px;
     }
 
     .btn-request-book:hover {
-      background-color: #f8fafc;
+      background-color: #f2bd20;
       transform: translateY(-2px);
       box-shadow: 0 8px 16px -2px rgba(0, 0, 0, 0.25);
     }
