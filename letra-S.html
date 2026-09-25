@@ -24,8 +24,10 @@
     .alphabet-section { background-color: #F8FAFC; border-radius: 12px; padding: 3rem 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 2rem; text-align: center; }
     .alphabet-title { font-family: "Times New Roman", Times, serif; font-weight: bold; font-size: 1.8rem; color: #0f172a; margin-bottom: 1rem; }
     .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; text-align: left; }
-    .book-card { background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); color: #0f172a; padding: 1rem; text-decoration: none; font-weight: 700; transition: transform 0.2s, box-shadow 0.2s; display: block; }
+    .book-card { background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); color: #0f172a; padding: 1rem; text-decoration: none; font-weight: 700; transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; gap: 0.25rem; }
     .book-card:hover { transform: scale(1.05); box-shadow: 0 8px 16px rgba(0,0,0,0.15); }
+    .book-title { display: block; font-weight: 700; }
+    .book-author { display: block; font-size: 0.9rem; font-weight: 500; color: #475569; }
     footer { background: var(--bone-white); text-align: center; padding: 1.5rem; color: #64748b; margin-top: auto; border-top: 1px solid var(--border-color); }
     @media (max-width: 600px) { .logo { font-size: 2.8rem; } .alphabet-section { padding: 2rem 1.25rem; } .book-grid { grid-template-columns: 1fr; } }
   </style>
@@ -45,18 +47,18 @@
     <section class="alphabet-section">
       <h2 class="alphabet-title" id="titulo-catalogo">Catálogo de libros con S</h2>
       <div class="book-grid">
-        <div class="book-card">El sabor de la tierruca — Jose Maria de Pereda</div>
-        <div class="book-card">El señorito Octavio — Armando Palacio Valdes</div>
-        <div class="book-card">Las aventuras de Sherlock Holmes — arthur conan doyle</div>
-        <div class="book-card">La segunda casaca — Benito Perez Galdos</div>
-        <div class="book-card">La sirena negra — Emilia Pardo Bazan</div>
-        <div class="book-card">Sangre y arena — Vicente Blasco Ibañez</div>
-        <div class="book-card">Seis personajes en busca de autor — luigi pirandello</div>
-        <div class="book-card">Sentido y sensibilidad — jane austen</div>
-        <div class="book-card">Sonata de otoño, Sonata de invierno; memorias del marques de Bradomin — Ramon del Valle Inclan</div>
-        <div class="book-card">Sonnica la cortesana — Vicente Blasco Ibañez</div>
-        <div class="book-card">Sotileza — Jose Maria de Pereda</div>
-        <div class="book-card">su unico hijo — Leopoldo Alas</div>
+        <a class="book-card" href="#"><span class="book-title">El sabor de la tierruca</span><span class="book-author">Jose Maria de Pereda</span></a>
+        <a class="book-card" href="#"><span class="book-title">El señorito Octavio</span><span class="book-author">Armando Palacio Valdes</span></a>
+        <a class="book-card" href="#"><span class="book-title">Las aventuras de Sherlock Holmes</span><span class="book-author">arthur conan doyle</span></a>
+        <a class="book-card" href="#"><span class="book-title">La segunda casaca</span><span class="book-author">Benito Perez Galdos</span></a>
+        <a class="book-card" href="#"><span class="book-title">La sirena negra</span><span class="book-author">Emilia Pardo Bazan</span></a>
+        <a class="book-card" href="#"><span class="book-title">Sangre y arena</span><span class="book-author">Vicente Blasco Ibañez</span></a>
+        <a class="book-card" href="#"><span class="book-title">Seis personajes en busca de autor</span><span class="book-author">luigi pirandello</span></a>
+        <a class="book-card" href="#"><span class="book-title">Sentido y sensibilidad</span><span class="book-author">jane austen</span></a>
+        <a class="book-card" href="#"><span class="book-title">Sonata de otoño, Sonata de invierno; memorias del marques de Bradomin</span><span class="book-author">Ramon del Valle Inclan</span></a>
+        <a class="book-card" href="#"><span class="book-title">Sonnica la cortesana</span><span class="book-author">Vicente Blasco Ibañez</span></a>
+        <a class="book-card" href="#"><span class="book-title">Sotileza</span><span class="book-author">Jose Maria de Pereda</span></a>
+        <a class="book-card" href="#"><span class="book-title">su unico hijo</span><span class="book-author">Leopoldo Alas</span></a>
       </div>
     </section>
   </main>
