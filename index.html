@@ -44,7 +44,7 @@
       min-height: auto;
     }
 
-    .header-content { display:flex; flex-direction:row; align-items:center; justify-content:center; gap:16px; padding:1.5rem 1rem; }
+    
 
     .header-content > img {
       width: 92px !important;
@@ -131,7 +131,7 @@
         width: 70px !important;
       }
 
-      .header-content { display:flex; flex-direction:row; align-items:center; justify-content:center; gap:16px; padding:1.5rem 1rem; }
+      
 
       .quick-links {
         min-height: 50px;
@@ -406,6 +406,24 @@
       color: #64748b;
     }
   </style>
+
+<style id="fix-robot">
+.header-content{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:18px !important;
+}
+.header-content img[src*="robot-header"]{
+  width:88px !important;
+  height:auto !important;
+  max-width:none !important;
+  min-width:88px !important;
+  margin:0 !important;
+}
+</style>
+
 </head>
 <body>
 
@@ -413,7 +431,7 @@
   <div class="header-content" style="display: flex; align-items: center; justify-content: center; gap: 15px;">
     
     <!-- Personaje -->
-    <img src="robot-header.png" style="width:78px; height:auto; margin-right:14px; vertical-align:middle;">
+    <img src="robot-header.png" id="robot-logo" alt="logo">
 
     <!-- Título y Subtítulo -->
     <div style="text-align: center;">
