@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>{{TITULO}} - Bibliot.es</title>
+<link rel="stylesheet" href="/bibliotes/assets/style.css">
+</head>
+<body style="background:#5f7a99; margin:0;">
+<header style="background:#a0bccc; text-align:center; padding:1.2rem 1rem; ">
+  <div style="display:flex; justify-content:center; align-items:center; gap:28px; flex-wrap:wrap; max-width:1100px; margin:0 auto;">
+    <img src="/bibliotes/img/robot-bibliotes.png?v=4" alt="Robot bibliotes" style="width:140px; height:140px; object-fit:contain; display:block; flex-shrink:0;">
+    <div style="text-align:center;">
+      <a href="/bibliotes/" style="text-decoration:none; font-family:'Times New Roman',serif; font-size:3.6rem; color:#000; line-height:1; display:inline-flex; align-items:baseline;">
+        Bibliot<span style="font-family:Arial,sans-serif; font-weight:900; color:#fff; background:#0047AB; padding:2px 14px; border-radius:10px; margin-left:4px;">es</span>
+      </a>
+      <div style="margin-top:4px; font-size:1rem;">Biblioteca Electrónica El Salvador</div>
+    </div>
+  </div>
+</header>
+<nav style="background:#e8eef5; padding:10px 12px; text-align:center; display:flex; justify-content:center; gap:22px; flex-wrap:wrap; font-family:Arial,sans-serif; font-size:1rem;">
+  <a href="/bibliotes/" style="text-decoration:none; color:#0047AB; font-weight:700;">Inicio</a>
+  <a href="/bibliotes/biblioteca.html" style="text-decoration:none; color:#0047AB;">Biblioteca</a>
+  <a href="/bibliotes/letra-A.html" style="text-decoration:none; color:#0047AB;">Letra A</a>
+</nav>
+<main style="max-width:980px; margin:32px auto; background:#f5f1e8; padding:24px; border-radius:12px; display:flex; gap:24px;">
+  <img src="/bibliotes/assets/portadas/A/{{IMAGEN}}" alt="Portada de {{TITULO}}" style="width:240px; border-radius:8px; object-fit:cover;">
+  <div style="flex:1;">
+    <h1 style="color:#1a4fb5; font-family:serif;">{{TITULO}}</h1>
+    <h3 style="color:#666;">{{AUTOR}}</h3>
+    <p style="line-height:1.6;">{{RESENA}}</p>
+    <button id="btnDescarga" style="background:#1a4fb5; color:white; padding:16px; border:none; border-radius:8px; width:100%; font-weight:800; cursor:pointer; margin-top:20px;">DESCARGA DIRECTA PDF</button>
+  </div>
+</main>
+<footer style="text-align:center; padding:20px; background:#fff; margin-top:40px;">© 2026 Bibliotes • Dominio Público</footer>
+
+<script>
+const DRIVE_ID = "{{DRIVE_ID}}";
+const MONETAG_LINK = "https://TU_DIRECTLINK_DE_MONETAG_AQUI";
+document.getElementById("btnDescarga").addEventListener("click", function(){
+  window.open(MONETAG_LINK, "_blank");
+  setTimeout(()=>{ window.location.href = "https://drive.google.com/uc?export=download&id=" + DRIVE_ID; }, 700);
+});
+</script>
+</body>
+</html>
