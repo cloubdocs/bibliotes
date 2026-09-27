@@ -1,10 +1,11 @@
 [
-  {
-    "slug": "abel-sanchez",
-    "titulo": "Abel Sanchez",
-    "autor": "Miguel de Unamuno",
-    "resena": "Una novela sobre la amistad, la rivalidad y los celos que explora el conflicto interior de sus dos protagonistas a lo largo de sus vidas.",
-    "imagen": "abel-sanchez.webp",
-    "drive_id": "PEGA_AQUI_ID_DEL_PDF_DE_ABEL"
-  }
+  {"slug":"a-traves-del-espejo-y-lo-que-alicia-encontro","titulo":"A traves del espejo y lo que Alicia encontro","autor":"Lewis Carroll","resena":"Alicia cruza el espejo y vive una partida de ajedrez fantástica en un mundo del revés.","imagen":"a-traves-del-espejo-y-lo-que-alicia-encontro.webp","drive_id":"PEGA_AQUI_ID_1"},
+  {"slug":"abel-sanchez","titulo":"Abel Sanchez","autor":"Miguel de Unamuno","resena":"Una historia de envidia y amistad entre Joaquin Monegro y Abel Sanchez a lo largo de su vida.","imagen":"abel-sanchez.webp","drive_id":"PEGA_AQUI_ID_2"},
+  {"slug":"alicia-en-el-pais-de-las-maravillas","titulo":"Alicia en el pais de las maravillas","autor":"Lewis Carroll","resena":"El viaje de Alicia por un mundo absurdo lleno de personajes inolvidables.","imagen":"alicia-en-el-pais-de-las-maravillas.webp","drive_id":"PEGA_AQUI_ID_3"},
+  {"slug":"amor-y-pedagogia","titulo":"Amor y pedagogia","autor":"Miguel de Unamuno","resena":"Sátira sobre un padre que quiere criar a su hijo con pedagogía científica contra el amor.","imagen":"amor-y-pedagogia.webp","drive_id":"PEGA_AQUI_ID_4"},
+  {"slug":"andanzas-y-malandanzas","titulo":"Andanzas y malandanzas","autor":"Alberto Rivas Bonilla","resena":"Cuentos y relatos salvadoreños de picardía y crítica social.","imagen":"andanzas-y-malandanzas.webp","drive_id":"PEGA_AQUI_ID_5"},
+  {"slug":"andanzas-y-visiones","titulo":"Andanzas y visiones","autor":"Miguel de Unamuno","resena":"Relatos de viaje y reflexión íntima de Unamuno por España.","imagen":"andanzas-y-visiones.webp","drive_id":"PEGA_AQUI_ID_6"},
+  {"slug":"aves-sin-nido","titulo":"Aves sin nido","autor":"Clorinda Matto de Turner","resena":"Novela indigenista que denuncia los abusos contra los indígenas en los Andes.","imagen":"aves-sin-nido.webp","drive_id":"PEGA_AQUI_ID_7"},
+  {"slug":"el-arbol-de-la-ciencia","titulo":"El arbol de la ciencia","autor":"Pio Baroja","resena":"La crisis existencial de Andrés Hurtado, médico frente a la vida y la ciencia.","imagen":"el-arbol-de-la-ciencia.webp","drive_id":"PEGA_AQUI_ID_8"},
+  {"slug":"las-aves","titulo":"Las aves","autor":"Aristófanes","resena":"Comedia griega donde dos atenienses fundan una ciudad de pájaros entre el cielo y la tierra.","imagen":"las-aves.webp","drive_id":"PEGA_AQUI_ID_9"}
 ]
