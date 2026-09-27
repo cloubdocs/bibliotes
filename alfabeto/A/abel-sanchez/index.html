@@ -8,12 +8,12 @@
     :root { --bg-body-dark: #5c768d; --header-light: #a0bccc; --salvador-blue: #0047AB; --salvador-blue-hover: #003380; --bone-white: #f7f4ef; --text-main: #1e293b; --border-color: #cbd5e1; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background-color: var(--bg-body-dark); color: var(--text-main); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
-    header { background-color: var(--header-light); display: flex; flex-direction: column; width: 100%; border-top: 4px solid var(--salvador-blue); }
+    header { background-color: var(--header-light); display: flex; flex-direction: column; width: 100%;  }
     .header-content { padding: 2rem 1rem; text-align: center; }
     .logo { font-family: "Times New Roman", Times, serif; font-size: 3.5rem; font-weight: normal; color: #000; text-decoration: none; letter-spacing: -1px; }
     .logo .digital-es { font-family: Arial, Helvetica, sans-serif; font-weight: 900; color: #fff; background-color: var(--salvador-blue); padding: 0 10px; border-radius: 6px; display: inline-block; letter-spacing: 0; margin-left: 2px; transform: translateY(-3px); }
     .subtitle { font-family: "Times New Roman", Times, serif; font-size: 1.2rem; color: #000; margin-top: 0.5rem; }
-    nav { background: var(--bone-white); display: flex; justify-content: center; gap: 1.2rem; padding: 0.85rem 1rem; border-bottom: 1px solid var(--border-color); flex-wrap: wrap; }
+    nav { background: var(--bone-white); display: flex; justify-content: center; gap: 1.2rem; padding: 0.85rem 1rem;  flex-wrap: wrap; }
     nav a { color: #334155; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
     main { max-width: 900px; width: 100%; margin: 2rem auto; padding: 0 1rem; flex: 1; }
     .book-card { background: var(--bone-white); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); display: grid; grid-template-columns: minmax(180px, 260px) 1fr; gap: 2rem; align-items: start; }
@@ -23,12 +23,12 @@
     .synopsis { margin-bottom: 1.5rem; }
     .download-btn { display: block; text-align: center; background-color: var(--salvador-blue); color: #fff; text-decoration: none; padding: 1rem; border-radius: 8px; font-size: 1rem; font-weight: 800; transition: background-color 0.2s, transform 0.2s; }
     .download-btn:hover { background-color: var(--salvador-blue-hover); transform: translateY(-2px); }
-    footer { background: var(--bone-white); border-top: 1px solid var(--border-color); text-align: center; padding: 1.5rem; font-size: 0.85rem; color: #64748b; }
+    footer { background: var(--bone-white);  text-align: center; padding: 1.5rem; font-size: 0.85rem; color: #64748b; }
     @media (max-width: 650px) { .logo { font-size: 2.8rem; } .book-card { grid-template-columns: 1fr; } .book-cover { max-width: 260px; justify-self: center; } }
   </style>
 </head>
 <body>
-  <<header style="background:#a0bccc; text-align:center; padding:1.2rem 1rem; border-top:4px solid #0047AB;">
+  <<header style="background:#a0bccc; text-align:center; padding:1.2rem 1rem; ">
   <div style="display:flex; justify-content:center; align-items:center; gap:28px; flex-wrap:wrap; max-width:1100px; margin:0 auto;">
     <img src="/bibliotes/img/robot-bibliotes.png?v=4" alt="Robot bibliotes" style="width:140px; height:140px; object-fit:contain; display:block; flex-shrink:0;">
     <div style="text-align:center;">
