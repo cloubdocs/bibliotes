@@ -1,61 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letra B - Bibliotes</title>
-  <style>
-    :root { --bg-body-dark: #5c768d; --header-light: #a0bccc; --salvador-blue: #0047AB; --bone-white: #f7f4ef; --border-color: #cbd5e1; }
-    *{box-sizing:border-box;margin:0;padding:0} body{background:var(--bg-body-dark);font-family:-apple-system,sans-serif;display:flex;flex-direction:column;min-height:100vh}
-    header{background:var(--header-light);text-align:center;padding:1.5rem;border-top:4px solid var(--salvador-blue)}
-    .logo{font-family:"Times New Roman",Times,serif;font-size:3.5rem;color:#000;text-decoration:none} .logo .digital-es{font-family:Arial,sans-serif;font-weight:900;color:#fff;background:var(--salvador-blue);padding:0 10px;border-radius:6px;display:inline-block;margin-left:2px;transform:translateY(-3px)}
-    nav{background:#fff;display:flex;justify-content:center;gap:1.2rem;padding:.85rem 1rem;border-bottom:1px solid var(--border-color)} nav a,nav span{color:#334155;text-decoration:none;font-size:.9rem;font-weight:600}
-    main{max-width:1100px;width:100%;margin:2rem auto;padding:0 1rem;flex:1}
-    .alphabet-section{background:#F8FAFC;border-radius:12px;padding:3rem 2rem;box-shadow:0 4px 12px rgba(0,0,0,.08);text-align:center}
-    .alphabet-title{font-family:"Times New Roman",Times,serif;font-weight:bold;font-size:1.8rem;color:#0f172a;margin-bottom:1rem}
-    .book-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;text-align:left}
-    .book-card{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.08);color:#0f172a;padding:1rem;text-decoration:none;font-weight:700;transition:.2s;display:block}
-    .book-card:hover{transform:scale(1.05);box-shadow:0 8px 16px rgba(0,0,0,.15)}
-    footer{background:var(--bone-white);text-align:center;padding:1.5rem;color:#64748b;margin-top:auto;border-top:1px solid var(--border-color)}
-  
-   .libro.autor,.autor {
-      display:block;
-      font-size:0.88rem;
-      font-weight:400;
-      color:#6b7280;
-      margin-top:4px;
-      line-height:1.2;
-    }
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letra B - Bibliotes</title>
+<style>
+  body { margin:0; background:#5a758e; font-family: system-ui, serif; }
+  .header { background:#b8cfe2; padding:20px; text-align:center; }
+  .logo { font-family: Georgia, serif; font-size:48px; }
+  .logo b { background:#1a4da1; color:white; padding:2px 12px; border-radius:6px; margin-left:4px; }
+  nav { background:white; text-align:center; padding:12px; }
+  nav a { margin:0 12px; text-decoration:none; color:#1a2e45; font-weight:600; }
+  .container { background:white; max-width:1100px; margin:30px auto; border-radius:16px; padding:30px; box-shadow:0 10px 25px rgba(0,0,0,.15); }
+  h1 { text-align:center; font-family: Georgia, serif; color:#102a43; }
+  .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; margin-top:24px; }
+  @media(max-width:800px){ .grid{ grid-template-columns:1fr; } }
+  .card { border:1px solid #eef2f7; border-radius:12px; padding:16px 18px; text-decoration:none; color:inherit; box-shadow:0 2px 8px rgba(0,0,0,.05); display:block; }
+  .card:hover { border-color:#1a4da1; }
+  .card strong { display:block; font-size:16px; color:#111; line-height:1.3; }
+  .card span { font-size:14px; color:#6b7a8f; }
 </style>
 </head>
 <body>
-<header><a href="/bibliotes/" class="logo">Bibliot<span class="digital-es">es</span></a></header>
-<nav><a href="/bibliotes/">Inicio</a><a href="/bibliotes/biblioteca.html">Biblioteca</a><span>Letra B</span></nav>
-<main>
-<section class="alphabet-section">
-<h2 class="alphabet-title" id="titulo-catalogo">Catálogo de libros con B</h2>
-<div class="book-grid" id="grid-B">
-<a class="book-card" href="/bibliotes/alfabeto/B/bajo-la-hiedra/">Bajo la hiedra<span class="autor">Elspeth Cooper</span></a>
-<a class="book-card" href="/bibliotes/alfabeto/B/barba-azul/">Barba Azul<span class="autor">Charles Perrault</span></a>
-<a class="book-card" href="/bibliotes/alfabeto/B/blanca-nieves/">Blanca Nieves<span class="autor">Hermanos Grimm</span></a>
-<a class="book-card" href="/bibliotes/alfabeto/B/el-banquete/">El Banquete<span class="autor">Platón</span></a>
-<a class="book-card" href="/bibliotes/alfabeto/B/el-buey-suelto/">El buey suelto<span class="autor">José María de Pereda</span></a>
-<a class="book-card" href="/bibliotes/alfabeto/B/la-batalla-de-los-arapiles/">La batalla de los Arapiles<span class="autor">Benito Pérez Galdós</span></a>
-<a class="book-card" href="/bibliotes/alfabeto/B/la-batalla-del-somme/">La batalla del Somme<span class="autor">Martin Gilbert</span></a>
-<a class="book-card" href="/bibliotes/alfabeto/B/la-bella-durmiente-del-bosque/">La bella durmiente<span class="autor">Charles Perrault</span> del bosque<span class="autor">Charles Perrault</span></a>
-<a class="book-card" href="/bibliotes/alfabeto/B/la-bella-durmiente/">La bella durmiente<span class="autor">Charles Perrault</span></a>
-<a class="book-card" href="/bibliotes/alfabeto/B/las-bodas-de-cadmo-y-harmonia/">Las bodas de Cadmo y Harmonía<span class="autor">Roberto Calasso</span></a>
-</div>
-</section>
-</main>
-<footer><p>&copy; 2026 Bibliotes</p></footer>
-<script>
-// ESTA ES LA FUNCION AUTOMATICA
-document.addEventListener('DOMContentLoaded', function(){
-  const total = document.querySelectorAll('.book-card').length;
-  const titulo = document.getElementById('titulo-catalogo');
-  titulo.textContent = `Catálogo de libros con B (${total})`;
-});
-</script>
+  <div class="header"><div class="logo">Bibliot<span style="font-weight:800;">es</span><b>es</b></div></div>
+  <nav><a href="/bibliotes/">Inicio</a><a href="/bibliotes/biblioteca.html">Biblioteca</a><a href="#">Letra B</a></nav>
+  <div class="container">
+    <h1>Catálogo de libros con B (10)</h1>
+    <div class="grid">
+      <a class="card" href="alfabeto/B/bajo-la-hiedra/"><strong>Bajo la hiedra</strong><span>Elspeth Cooper</span></a>
+      <a class="card" href="alfabeto/B/barba-azul/"><strong>Barba Azul</strong><span>Charles Perrault</span></a>
+      <a class="card" href="alfabeto/B/blanca-nieves/"><strong>Blanca Nieves</strong><span>Hermanos Grimm</span></a>
+      <a class="card" href="alfabeto/B/el-banquete/"><strong>El Banquete</strong><span>Platón</span></a>
+      <a class="card" href="alfabeto/B/el-buey-suelto/"><strong>El buey suelto</strong><span>José María de Pereda</span></a>
+      <a class="card" href="alfabeto/B/la-batalla-de-los-arapiles/"><strong>La batalla de los Arapiles</strong><span>Benito Pérez Galdós</span></a>
+      <a class="card" href="alfabeto/B/la-batalla-del-somme/"><strong>La batalla del Somme</strong><span>Martin Gilbert</span></a>
+      <a class="card" href="alfabeto/B/la-bella-durmiente-del-bosque/"><strong>La bella durmiente del bosque</strong><span>Charles Perrault</span></a>
+      <a class="card" href="alfabeto/B/la-bella-durmiente/"><strong>La bella durmiente</strong><span>Charles Perrault</span></a>
+      <a class="card" href="alfabeto/B/las-bodas-de-cadmo-y-harmonia/"><strong>Las bodas de Cadmo y Harmonía</strong><span>Roberto Calasso</span></a>
+    </div>
+  </div>
 </body>
 </html>
