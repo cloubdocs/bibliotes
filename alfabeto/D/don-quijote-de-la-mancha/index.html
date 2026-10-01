@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Don Quijote de la Mancha - Bibliotes</title>
+  <style>
+    :root { --bg-body-dark: #5c768d; --header-light: #a0bccc; --salvador-blue: #0047AB; --salvador-blue-hover: #003380; --bone-white: #f7f4ef; --text-main: #1e293b; --border-color: #cbd5e1; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg-body-dark); color: var(--text-main); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+    header { background-color: var(--header-light); display: flex; flex-direction: column; width: 100%; }
+    .header-content { padding: 2rem 1rem; text-align: center; }
+    .logo { font-family: "Times New Roman", Times, serif; line-height: 1; white-space: nowrap; margin: 0; font-size: 3.5rem; font-weight: normal; color: #000; text-decoration: none; letter-spacing: -1px; }
+    .logo .digital-es { font: inherit; line-height: inherit; color: #ffffff; background: none; padding: 0; border-radius: 0; display: inline; letter-spacing: inherit; margin: 0; transform: none; vertical-align: baseline; }
+    .subtitle { font-family: "Times New Roman", Times, serif; font-size: 1.2rem; color: #000; margin-top: 0.5rem; }
+    nav { background: var(--bone-white); display: flex; justify-content: center; gap: 1.2rem; padding: 0.85rem 1rem; flex-wrap: wrap; }
+    nav a { color: #334155; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+    main { max-width: 900px; width: 100%; margin: 2rem auto; padding: 0 1rem; flex: 1; }
+    .book-card { background: var(--bone-white); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); display: grid; grid-template-columns: minmax(180px, 260px) 1fr; gap: 2rem; align-items: start; }
+    .book-cover { width: 100%; border-radius: 4px; background: #e2e8f0; }
+    h1 { color: var(--salvador-blue); font-family: "Times New Roman", Times, serif; font-size: 2.2rem; margin-bottom: 0.35rem; }
+    .author { color: #64748b; font-weight: 600; margin-bottom: 1.25rem; }
+    .synopsis { margin-bottom: 1.5rem; }
+    .download-btn { display: block; text-align: center; background-color: var(--salvador-blue); color: #fff; text-decoration: none; padding: 1rem; border-radius: 8px; font-size: 1rem; font-weight: 800; transition: background-color 0.2s, transform 0.2s; }
+    .download-btn:hover { background-color: var(--salvador-blue-hover); transform: translateY(-2px); }
+    footer { background: var(--bone-white); text-align: center; padding: 1.5rem; font-size: 0.85rem; color: #64748b; }
+    @media (max-width: 650px) { .logo { font-size: 2.8rem; } .book-card { grid-template-columns: 1fr; } .book-cover { max-width: 260px; justify-self: center; } }
+  </style>
+</head>
+<body>
+  <header style="background:#a0bccc; padding:22px 20px;">
+    <div style="max-width:1000px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:20px;">
+      <img src="/bibliotes/img/robot_4_libros_gris.png" alt="robot" style="height:70px; width:auto; flex-shrink:0;">
+      <div style="text-align:left;">
+        <h1 class="logo">Bibliot<span class="digital-es">es</span></h1>
+      </div>
+    </div>
+  </header>
+  <nav style="background:#e8eef5; padding:10px 12px; text-align:center; display:flex; justify-content:center; gap:22px; flex-wrap:wrap; font-family:Arial,sans-serif; font-size:1rem;">
+    <a href="/bibliotes/" style="text-decoration:none; color:#0047AB; font-weight:700;">Inicio</a>
+    <a href="/bibliotes/biblioteca.html" style="text-decoration:none; color:#0047AB;">Biblioteca</a>
+    <a href="/bibliotes/letra-D.html" style="text-decoration:none; color:#0047AB;">Letra D</a>
+  </nav>
+  <main>
+    <article class="book-card">
+      <img src="/bibliotes/assets/portadas/D/don-quijote-de-la-mancha.webp" alt="Portada de Don Quijote de la Mancha" style="width:220px;border-radius:8px;">
+      <div>
+        <h1>Don Quijote de la Mancha</h1>
+        <h2 class="author">Miguel de Cervantes Saavedra</h2>
+        <p class="synopsis">Alonso Quijano pierde el juicio leyendo libros de caballerías y sale al camino convertido en don Quijote, acompañado por Sancho Panza. Sus aventuras enfrentan los ideales del caballero con la realidad y componen una mirada humorística y humana sobre su época.</p>
+      </div>
+      <a class="download-btn btn-descarga" href="#" data-drive="" style="grid-column:1 / -1; width:100%; max-width:520px; justify-self:center;">DESCARGA DIRECTA PDF</a>
+    </article>
+  </main>
+  <footer><p>&copy; 2026 Bibliotes • Dominio Público y Contenido Abierto</p></footer>
+</body>
+</html>
