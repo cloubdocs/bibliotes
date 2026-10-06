@@ -9,8 +9,10 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background-color: var(--bg-body-dark); color: var(--text-main); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
     header { background-color: var(--header-light); display: flex; flex-direction: column; width: 100%; }
+    .header-content { padding: 2rem 1rem; text-align: center; }
     .logo { font-family: "Times New Roman", Times, serif; line-height: 1; white-space: nowrap; margin: 0; font-size: 3.5rem; font-weight: normal; color: #000; text-decoration: none; letter-spacing: -1px; }
     .logo .digital-es { font: inherit; line-height: inherit; color: #ffffff; background: none; padding: 0; border-radius: 0; display: inline; letter-spacing: inherit; margin: 0; transform: none; vertical-align: baseline; }
+    .subtitle { font-family: "Times New Roman", Times, serif; font-size: 1.2rem; color: #000; margin-top: 0.5rem; }
     nav { background: var(--bone-white); display: flex; justify-content: center; gap: 1.2rem; padding: 0.85rem 1rem; flex-wrap: wrap; }
     nav a { color: #334155; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
     main { max-width: 900px; width: 100%; margin: 2rem auto; padding: 0 1rem; flex: 1; }
@@ -28,20 +30,21 @@
 <body>
   <header style="background:#a0bccc; padding:22px 20px;">
     <div style="max-width:1000px; margin:0 auto; display:flex; align-items:center; justify-content:center; gap:20px;">
-      <img src="/img/robot_4_libros_gris.png" alt="robot" style="height:70px; width:auto; flex-shrink:0;">
+      <img src="/bibliotes/img/robot_4_libros_gris.png" alt="robot" style="height:70px; width:auto; flex-shrink:0;">
       <div style="text-align:left;">
         <h1 class="logo">Bibliot<span class="digital-es">es</span></h1>
       </div>
     </div>
   </header>
   <nav style="background:#e8eef5; padding:10px 12px; text-align:center; display:flex; justify-content:center; gap:22px; flex-wrap:wrap; font-family:Arial,sans-serif; font-size:1rem;">
-    <a href="/" style="text-decoration:none; color:#0047AB; font-weight:700;">Inicio</a>
-    <a href="/biblioteca.html" style="text-decoration:none; color:#0047AB;">Biblioteca</a>
-    <a href="/letra-E.html" style="text-decoration:none; color:#0047AB;">Letra E</a>
+    <a href="/bibliotes/" style="text-decoration:none; color:#0047AB; font-weight:700;">Inicio</a>
+    <a href="/bibliotes/biblioteca.html" style="text-decoration:none; color:#0047AB;">Biblioteca</a>
+    <a href="/bibliotes/letra-E.html" style="text-decoration:none; color:#0047AB;">Letra E</a>
+    <span style="color:#334155; font-weight:600;">Electra</span>
   </nav>
   <main>
     <article class="book-card">
-      <img src="/assets/portadas/E/electra.webp" alt="Portada de Electra" class="book-cover">
+      <img src="../../../assets/portadas/E/electra.webp" alt="Portada de Electra" class="book-cover">
       <div>
         <h1>Electra</h1>
         <h2 class="author">Benito Pérez Galdós</h2>
