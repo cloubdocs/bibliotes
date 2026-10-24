@@ -1,40 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Letra C - Bibliotes</title>
-  <style>
-    :root { --bg-body-dark: #5c768d; --header-light: #a0bccc; --salvador-blue: #0047AB; --bone-white: #f7f4ef; --border-color: #cbd5e1; } * { box-sizing: border-box; margin: 0; padding: 0; } body { background-color: var(--bg-body-dark); font-family: -apple-system, sans-serif; display: flex; flex-direction: column; min-height: 100vh; } header { background-color: var(--header-light); text-align: center; padding: 1.5rem; border-top: 4px solid var(--salvador-blue); } .logo { font-family: "Times New Roman", Times, serif; line-height: 1; white-space: nowrap; margin: 0; font-size: 3.5rem; color: #000; text-decoration: none; letter-spacing: -1px; } .logo .digital-es { font: inherit; line-height: inherit; color: #ffffff; background: none; padding: 0; border-radius: 0; display: inline; letter-spacing: inherit; margin: 0; transform: none; vertical-align: baseline; } nav { background-color: #FFFFFF; display: flex; justify-content: center; align-items: center; gap: 1.2rem; padding: 0.85rem 1rem; border-bottom: 1px solid var(--border-color); flex-wrap: wrap; } nav a, nav span { color: #334155; text-decoration: none; font-size: 0.9rem; font-weight: 600; } nav a:hover { color: var(--salvador-blue); } main { max-width: 1100px; width: 100%; margin: 2rem auto; padding: 0 1rem; flex: 1; } .alphabet-section { background-color: #F8FAFC; border-radius: 12px; padding: 3rem 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 2rem; text-align: center; } .alphabet-title { font-family: "Times New Roman", Times, serif; font-weight: bold; font-size: 1.8rem; color: #0f172a; margin-bottom: 1rem; } .alphabet-section p { color: #475569; } footer { background: var(--bone-white); text-align: center; padding: 1.5rem; color: #64748b; margin-top: auto; border-top: 1px solid var(--border-color); } @media (max-width: 600px) { .logo { font-size: 2.8rem; } .alphabet-section { padding: 2rem 1.25rem; } }
-    .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; text-align: left; } .book-card { background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); color: #0f172a; padding: 1rem; text-decoration: none; font-weight: 700; transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; gap: 0.25rem; } .book-card:hover { transform: scale(1.05); box-shadow: 0 8px 16px rgba(0,0,0,0.15); } .book-title { display: block; font-weight: 700; } .book-author { display: block; font-size: 0.9rem; font-weight: 500; color: #475569; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letra C - Bibliotes</title>
+  <link rel="stylesheet" href="catalogo.css">
 </head>
 <body>
-<header><a href="/bibliotes/" class="logo">Bibliot<span class="digital-es">es</span></a></header>
-<nav><a href="/bibliotes/">Inicio</a><a href="/bibliotes/biblioteca.html">Biblioteca</a><span>Letra C</span></nav>
+<header>
+  <a href="/" class="logo">Bibliot<span class="digital-es">es</span></a>
+</header>
+
+<nav>
+  <a href="/">Inicio</a>
+  <a href="/biblioteca.html">Biblioteca</a>
+  <span>Letra C</span>
+</nav>
+
 <main>
   <section class="alphabet-section">
     <h2 class="alphabet-title" id="titulo-catalogo">Catálogo de libros con C</h2>
     <div class="book-grid">
-      <a class="book-card" href="/bibliotes/alfabeto/C/cantico-espiritual/"><span class="book-title">Cántico espiritual</span><span class="book-author">San Juan de la Cruz</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/caperucita-roja-hermanos-grimm/"><span class="book-title">Caperucita roja</span><span class="book-author">Hermanos Grimm</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/caperucita-roja-charles-perrault/"><span class="book-title">Caperucita roja</span><span class="book-author">Charles Perrault</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/cuento-de-navidad/"><span class="book-title">Cuento de Navidad</span><span class="book-author">Charles Dickens</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/cumbres-borrascosas/"><span class="book-title">Cumbres borrascosas</span><span class="book-author">Emily Brontë</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/cuentos-de-amor-de-locura-y-muerte/"><span class="book-title">Cuentos de amor, de locura y muerte</span><span class="book-author">Horacio Quiroga</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/el-canto-errante/"><span class="book-title">El canto errante</span><span class="book-author">Rubén Darío</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/el-capitan-veneno/"><span class="book-title">El capitán veneno</span><span class="book-author">Pedro Antonio de Alarcón</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/el-castillo/"><span class="book-title">El castillo</span><span class="book-author">Franz Kafka</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/el-conde-de-montecristo/"><span class="book-title">El conde de Montecristo</span><span class="book-author">Alejandro Dumas</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/el-conde-lucanor/"><span class="book-title">El conde Lucanor</span><span class="book-author">Infante Don Juan Manuel</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/el-corsario-negro/"><span class="book-title">El corsario negro</span><span class="book-author">Emilio Salgari</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/la-carreta/"><span class="book-title">La carreta</span><span class="book-author">Enrique Amorim</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/la-casa-en-el-mar-mas-azul/"><span class="book-title">La casa en el mar más azul</span><span class="book-author">T. J. Klune</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/la-casa-encantada/"><span class="book-title">La casa encantada</span><span class="book-author">Virginia Woolf</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/la-casa-inundada/"><span class="book-title">La casa inundada</span><span class="book-author">Felisberto Hernández</span></a>
-      <a class="book-card" href="/bibliotes/alfabeto/C/la-cenicienta/"><span class="book-title">La Cenicienta</span><span class="book-author">Charles Perrault</span></a>
+      <a class="book-card" href="/alfabeto/C/cantico-espiritual/">Cántico espiritual<span class="autor">San Juan de la Cruz</span></a>
+      <a class="book-card" href="/alfabeto/C/caperucita-roja-hermanos-grimm/">Caperucita roja<span class="autor">Hermanos Grimm</span></a>
+      <a class="book-card" href="/alfabeto/C/caperucita-roja-charles-perrault/">Caperucita roja<span class="autor">Charles Perrault</span></a>
+      <a class="book-card" href="/alfabeto/C/cuento-de-navidad/">Cuento de Navidad<span class="autor">Charles Dickens</span></a>
+      <a class="book-card" href="/alfabeto/C/cumbres-borrascosas/">Cumbres borrascosas<span class="autor">Emily Brontë</span></a>
+      <a class="book-card" href="/alfabeto/C/cuentos-de-amor-de-locura-y-muerte/">Cuentos de amor, de locura y muerte<span class="autor">Horacio Quiroga</span></a>
+      <a class="book-card" href="/alfabeto/C/el-canto-errante/">El canto errante<span class="autor">Rubén Darío</span></a>
+      <a class="book-card" href="/alfabeto/C/el-capitan-veneno/">El capitán veneno<span class="autor">Pedro Antonio de Alarcón</span></a>
+      <a class="book-card" href="/alfabeto/C/el-castillo/">El castillo<span class="autor">Franz Kafka</span></a>
+      <a class="book-card" href="/alfabeto/C/el-conde-de-montecristo/">El conde de Montecristo<span class="autor">Alejandro Dumas</span></a>
+      <a class="book-card" href="/alfabeto/C/el-conde-lucanor/">El conde Lucanor<span class="autor">Infante Don Juan Manuel</span></a>
+      <a class="book-card" href="/alfabeto/C/el-corsario-negro/">El corsario negro<span class="autor">Emilio Salgari</span></a>
+      <a class="book-card" href="/alfabeto/C/la-carreta/">La carreta<span class="autor">Enrique Amorim</span></a>
+      <a class="book-card" href="/alfabeto/C/la-casa-en-el-mar-mas-azul/">La casa en el mar más azul<span class="autor">T. J. Klune</span></a>
+      <a class="book-card" href="/alfabeto/C/la-casa-encantada/">La casa encantada<span class="autor">Virginia Woolf</span></a>
+      <a class="book-card" href="/alfabeto/C/la-casa-inundada/">La casa inundada<span class="autor">Felisberto Hernández</span></a>
+      <a class="book-card" href="/alfabeto/C/la-cenicienta/">La Cenicienta<span class="autor">Charles Perrault</span></a>
     </div>
   </section>
 </main>
-<footer><p>&copy; 2026 Bibliotes • Dominio Público y Contenido Abierto</p></footer>
-<script>document.addEventListener('DOMContentLoaded', function(){ const total = document.querySelectorAll('.book-card').length; const titulo = document.getElementById('titulo-catalogo'); titulo.textContent = titulo.textContent + ' (' + total + ')'; });</script>
+
+<footer>
+  <p>&copy; 2026 Bibliotes • Dominio Público y Contenido Abierto</p>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const total = document.querySelectorAll('.book-card').length;
+  const titulo = document.getElementById('titulo-catalogo');
+  if (total > 0) titulo.textContent = `Catálogo de libros con C (${total})`;
+});
+</script>
 </body>
 </html>

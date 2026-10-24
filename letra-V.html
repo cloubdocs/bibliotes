@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Letra V - Bibliotes</title>
-<style>
-:root{ --bg-body-dark:#5c768d; --header-light:#a0bccc; --salvador-blue:#0047AB; --bone-white:#f7f4ef; }
-body{margin:0;background:var(--bg-body-dark);font-family:sans-serif}
-header{background:var(--header-light);padding:16px 0;text-align:center}
-.logo{ font-family: "Times New Roman", Times, serif; line-height: 1; white-space: nowrap; margin: 0;font-size:38px;color:#111;text-decoration:none}
-.logo .digital-es { font: inherit; line-height: inherit; color: #ffffff; background: none; padding: 0; border-radius: 0; display: inline; letter-spacing: inherit; margin: 0; transform: none; vertical-align: baseline; }
-nav{background:#fff;text-align:center;padding:10px}
-nav a{margin:0 10px;color:#2c3e50;text-decoration:none;font-weight:600;font-size:14px}
-.container{max-width:1050px;margin:28px auto;background:#fff;border-radius:14px;padding:30px 25px}
-.container h1{text-align:center;font-family:serif;margin-bottom:24px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-@media(max-width:800px){.grid{grid-template-columns:1fr}}
-.card{border:1px solid #e9eef3;border-radius:12px;padding:14px 16px;box-shadow:0 2px 6px rgba(0,0,0,.06)}
-.card .titulo{font-weight:700;font-size:14.5px;margin-bottom:4px}
-.card .autor{font-size:13px;color:#6b7a8a}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letra V - Bibliotes</title>
+  <link rel="stylesheet" href="catalogo.css">
 </head>
 <body>
-<header><a href="/bibliotes/" class="logo">Bibliot<span class="digital-es">es</span></a></header>
+<header>
+  <a href="/" class="logo">Bibliot<span class="digital-es">es</span></a>
+</header>
+
 <nav>
-  <a href="/bibliotes/">Inicio</a>
-  <a href="/bibliotes/biblioteca.html">Biblioteca</a>
-  <a>Letra V</a>
+  <a href="/">Inicio</a>
+  <a href="/biblioteca.html">Biblioteca</a>
+  <span>Letra V</span>
 </nav>
-<div class="container">
-  <h1>Catálogo de libros con V (7)</h1>
-  <div class="grid">
-    <div class="card"><div class="titulo">La veleta de Gastizar</div><div class="autor">Pío Baroja</div></div>
-    <div class="card"><div class="titulo">La vuelta al mundo en 80 días</div><div class="autor">Julio Verne</div></div>
-    <div class="card"><div class="titulo">La vuelta de Martín Fierro</div><div class="autor">José Hernández</div></div>
-    <div class="card"><div class="titulo">Los viajes de Gulliver</div><div class="autor">Jonathan Swift</div></div>
-    <div class="card"><div class="titulo">Veinte mil leguas de viaje submarino</div><div class="autor">Julio Verne</div></div>
-    <div class="card"><div class="titulo">Viaje al Centro de la Tierra</div><div class="autor">Julio Verne</div></div>
-    <div class="card"><div class="titulo">Viajes por España</div><div class="autor">Pedro Antonio de Alarcón</div></div>
-  </div>
-</div>
+
+<main>
+  <section class="alphabet-section">
+    <h2 class="alphabet-title" id="titulo-catalogo">Catálogo de libros con V</h2>
+    <p>Próximamente</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Bibliotes • Dominio Público y Contenido Abierto</p>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const total = document.querySelectorAll('.book-card').length;
+  const titulo = document.getElementById('titulo-catalogo');
+  if (total > 0) titulo.textContent = `Catálogo de libros con V (${total})`;
+});
+</script>
 </body>
 </html>

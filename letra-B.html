@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Letra B - Bibliotes</title>
-<link rel="stylesheet" href="catalogo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letra B - Bibliotes</title>
+  <link rel="stylesheet" href="catalogo.css">
 </head>
 <body>
-  <header>
-    <a href="/bibliotes/" class="logo">Bibliot<span class="digital-es">es</span></a>
-  </header>
+<header>
+  <a href="/" class="logo">Bibliot<span class="digital-es">es</span></a>
+</header>
 
-  <nav>
-    <a href="/bibliotes/">Inicio</a>
-    <a href="/bibliotes/biblioteca.html">Biblioteca</a>
-    <span>Letra B</span>
-  </nav>
+<nav>
+  <a href="/">Inicio</a>
+  <a href="/biblioteca.html">Biblioteca</a>
+  <span>Letra B</span>
+</nav>
 
-  <main>
-    <section class="alphabet-section">
-      <h2 class="alphabet-title" id="titulo-catalogo">Catálogo de libros con B</h2>
-      <div class="book-grid">
-        <a class="book-card" href="/bibliotes/alfabeto/B/bajo-la-hiedra/">Bajo la hiedra<span class="autor">Elspeth Cooper</span></a>
-        <a class="book-card" href="/bibliotes/alfabeto/B/barba-azul/">Barba Azul<span class="autor">Charles Perrault</span></a>
-        <a class="book-card" href="/bibliotes/alfabeto/B/blanca-nieves/">Blanca Nieves<span class="autor">Hermanos Grimm</span></a>
-        <a class="book-card" href="/bibliotes/alfabeto/B/el-banquete/">El Banquete<span class="autor">Platón</span></a>
-        <a class="book-card" href="/bibliotes/alfabeto/B/el-buey-suelto/">El buey suelto<span class="autor">José María de Pereda</span></a>
-        <a class="book-card" href="/bibliotes/alfabeto/B/la-batalla-de-los-arapiles/">La batalla de los Arapiles<span class="autor">Benito Pérez Galdós</span></a>
-        <a class="book-card" href="/bibliotes/alfabeto/B/la-batalla-del-somme/">La batalla del Somme<span class="autor">Martin Gilbert</span></a>
-        <a class="book-card" href="/bibliotes/alfabeto/B/la-bella-durmiente-del-bosque/">La bella durmiente del bosque<span class="autor">Charles Perrault</span></a>
-        <a class="book-card" href="/bibliotes/alfabeto/B/la-bella-durmiente/">La bella durmiente<span class="autor">Hermanos Grimm</span></a>
-        <a class="book-card" href="/bibliotes/alfabeto/B/las-bodas-de-cadmo-y-harmonia/">Las bodas de Cadmo y Harmonía<span class="autor">Roberto Calasso</span></a>
-      </div>
-    </section>
-  </main>
+<main>
+  <section class="alphabet-section">
+    <h2 class="alphabet-title" id="titulo-catalogo">Catálogo de libros con B</h2>
+    <div class="book-grid">
+      <a class="book-card" href="/alfabeto/B/bajo-la-hiedra/">Bajo la hiedra<span class="autor">Elspeth Cooper</span></a>
+      <a class="book-card" href="/alfabeto/B/barba-azul/">Barba Azul<span class="autor">Charles Perrault</span></a>
+      <a class="book-card" href="/alfabeto/B/blanca-nieves/">Blanca Nieves<span class="autor">Hermanos Grimm</span></a>
+      <a class="book-card" href="/alfabeto/B/el-banquete/">El Banquete<span class="autor">Platón</span></a>
+      <a class="book-card" href="/alfabeto/B/el-buey-suelto/">El buey suelto<span class="autor">José María de Pereda</span></a>
+      <a class="book-card" href="/alfabeto/B/la-batalla-de-los-arapiles/">La batalla de los Arapiles<span class="autor">Benito Pérez Galdós</span></a>
+      <a class="book-card" href="/alfabeto/B/la-batalla-del-somme/">La batalla del Somme<span class="autor">Martin Gilbert</span></a>
+      <a class="book-card" href="/alfabeto/B/la-bella-durmiente-del-bosque/">La bella durmiente del bosque<span class="autor">Charles Perrault</span></a>
+      <a class="book-card" href="/alfabeto/B/la-bella-durmiente/">La bella durmiente<span class="autor">Hermanos Grimm</span></a>
+      <a class="book-card" href="/alfabeto/B/las-bodas-de-cadmo-y-harmonia/">Las bodas de Cadmo y Harmonía<span class="autor">Roberto Calasso</span></a>
+    </div>
+  </section>
+</main>
 
-  <footer>
-    <p>&copy; 2026 Bibliotes • Dominio Público y Contenido Abierto</p>
-  </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const total = document.querySelectorAll('.book-card').length;
-      document.getElementById('titulo-catalogo').textContent = `Catálogo de libros con B (${total})`;
-    });
-  </script>
+<footer>
+  <p>&copy; 2026 Bibliotes • Dominio Público y Contenido Abierto</p>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const total = document.querySelectorAll('.book-card').length;
+  const titulo = document.getElementById('titulo-catalogo');
+  if (total > 0) titulo.textContent = `Catálogo de libros con B (${total})`;
+});
+</script>
 </body>
 </html>
